@@ -11,8 +11,9 @@
 Installing MECAGEN requires a few libraries to be installed first. The provided APT command lines are operative on Ubuntu/Debian but alternative installation method can be used (tested with pacman on Archlinux).
 
 * SDL2 (not to be mistaken with sdl1.2)
-
-    sudo apt-get install libsdl2-dev
+```
+sudo apt-get install libsdl2-dev
+```
 
 * GLEW
 
