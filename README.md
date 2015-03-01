@@ -1,17 +1,18 @@
-MECAGEN - A Simulation Platform of Animal Embryogenesis
-=======================================================
+# MECAGEN - A Simulation Platform of Animal Embryogenesis
 
 [MECAGEN](http://www.mecagen.org) aims to investigate the multiscale dynamics of the early stages of biological morphogenesis. 
 
-# Getting Started
+## Getting Started
 
-## Install
+### Install
 
-### Dependencies
+#### Dependencies
+
+Installing MECAGEN requires a few libraries to installed first. 
 
 version with VBO rendering. Better graphics. 
 
-### Compilation
+#### Compilation
 
 modify makefile 
 cuda path 
@@ -23,18 +24,21 @@ version without VBO rendering.
 
 %  make USE_VBO=1
 
-## Run examples
+### Compile and run examples
+
+All examples are compiled by:
+
 
 generate xml files
 
 écrire make example script
 
 
-## Write new simulations
+### Write new simulations
 
 auie
 
-# License
+## License
 
 MECAGEN is released under the GNU General Public License v3.0; see LICENSE for more details.
 
