@@ -16,8 +16,9 @@ sudo apt-get install libsdl2-dev
 ```
 
 * GLEW
-
-    sudo apt-get install libglew-dev
+```makefile
+sudo apt-get install libglew-dev
+```
 
 * GLUT
 
