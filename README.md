@@ -16,7 +16,7 @@ sudo apt-get install libsdl2-dev
 ```
 
 * GLEW
-```makefile
+```shell
 sudo apt-get install libglew-dev
 ```
 
