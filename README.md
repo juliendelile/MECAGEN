@@ -1,4 +1,4 @@
-# MECAGEN - A Simulation Platform of Animal Embryogenesis
+## MECAGEN - A Simulation Platform of Animal Embryogenesis
 
 [MECAGEN](http://www.mecagen.org) aims to investigate the multiscale dynamics of the early stages of biological morphogenesis. 
 
