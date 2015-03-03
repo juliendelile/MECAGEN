@@ -1,7 +1,8 @@
 ## MECAGEN - A Simulation Platform of Animal Embryogenesis
 
-[MECAGEN](http://www.mecagen.org) aims to investigate the multiscale dynamics of the early stages of biological morphogenesis. 
-...
+[MECAGEN](http://www.mecagen.org) is a C++ simulation platform for animal morphogenesis relying on a realistic agent-based model. It is centered on the physico-chemical coupling of cell mechanics with gene expression and molecular signaling.
+
+This project aims to investigate the multiscale dynamics of the early stages of biological morphogenesis. Embryonic development is viewed as an emergent, self-organized phenomenon based on a myriad of cells and their genetically regulated, and regulating, biomechanical behavior.
 
 ### Getting Started
 
@@ -9,7 +10,7 @@
 
 ##### Dependencies
 
-Installing MECAGEN requires a few libraries to be installed first. All of these libraries can be installed manually via the hyperlinks. Yet, using a package manager simplifies this preliminary step. We provide here APT command lines operative on Ubuntu/Debian, alternative package manager have also been tested (e.g. pacman on Archlinux).
+Installing MECAGEN requires a few libraries to be installed first. All of these libraries can be installed manually via the hyperlinks. Yet, using a package manager simplifies this prerequisite step. We provide APT command lines operative on Ubuntu/Debian, alternative package manager have also been tested (e.g. pacman on Archlinux).
 
 * SDL2.0 ([Simple DirectMedia Layer](https://www.libsdl.org/download-2.0.php), not to be mistaken with the previous version SDL1.2)
 ```shell
@@ -43,25 +44,25 @@ sudo apt-get install qt5-default
 
 The QT library folder must be in the LIBRARY_PATH environment variable and the folder containing the Meta-Object Compiler (moc) program in the PATH environment variable.
 
-* (Optional but recommended)[CUDA 5.5](https://developer.nvidia.com/cuda-toolkit-55-archive) or newer
+* (Optional but recommended) [CUDA 5.5](https://developer.nvidia.com/cuda-toolkit-55-archive) or newer
 
 Cuda is required to enable an enhanced rendering of the simulations. It uses Vertex Buffer Object to interoperate with OpenGL. 
 ```shell
 sudo apt-get install nvidia-cuda-toolkit
 ```
 
-* (Required only if no Cuda is installed)[Thrust](http://thrust.github.io/)
+* (Required only if no Cuda is installed) [Thrust](http://thrust.github.io/)
 
 Thrust is included with Cuda. Yet if you install MECAGEN without Cuda, the Thrust header library must be installed manually. Thrust is a C++ template library so the files just need to be copied on your system.
 
 ##### Compilation
 
 
-Edit the [mecagen makefile](mecagen/Makefile) by adding your installation paths for QT and (Cuda or Thrust).
+First, edit the [mecagen makefile](mecagen/Makefile) by adding your installation paths for QT and (Cuda or Thrust).
 
-MECAGEN used custom source code to 
+Then, decide whether which custom version of MECAGEN you want to use. Indeed, one of the specificities of the MECAGEN platform is the possibility to integrate external customization code to simulate specific structures and behaviors such as for example extra-embryonic tissue. Currently, two custom version are available: the "default" custom version performs regular MECAGEN simulation without specific structures or behaviors, and the "zebrafish" custom version adds rules for the yolk cell and the enveloping layer. 
 
-It is not currently possible to compile both mode at the same time. You have to choose whether you want to compile the default version
+It is not currently possible to compile both custom version at the same time so you have to choose whether you want to compile the default version
 
 ```shell
 make CUSTOM=default
@@ -73,7 +74,7 @@ or the zebrafish version
 make CUSTOM=zebrafish
 ```
 
-Moreover, if Cuda is installed on your system, we recommend that you use the VBO/Cuda version of the rendering by adding "USE_VBO=1" to the make command line.
+Moreover, if Cuda is installed on your system, we recommend that you compile MECAGEN with the VBO/Cuda version of the cells rendering by invoking "USE_VBO=1" with the make command line.
 
 ```shell
 make CUSTOM=default USE_VBO=1
@@ -84,20 +85,6 @@ or
 ```shell
 make CUSTOM=zebrafish USE_VBO=1
 ```
-
-
-version without VBO rendering.
-
-```shell
-make
-```
-
-%  make USE_VBO=1
-
-
-
-
-
 
 #### Generate and run examples
 
