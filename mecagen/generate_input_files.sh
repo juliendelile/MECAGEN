@@ -2,7 +2,7 @@
 
 if [ -z "$1" ]
   then
-    echo "No argument supplied. Please specify whether you want to generate \"default\" (./generate_input_files default) or \"zebrafish\" (./generate_input_files zebrafish) input files."
+    echo "No argument supplied. Please specify whether you want to generate \"all\" (./generate_input_files all) or \"default\" (./generate_input_files default) or \"zebrafish\" (./generate_input_files zebrafish) input files."
     exit
 fi
 
