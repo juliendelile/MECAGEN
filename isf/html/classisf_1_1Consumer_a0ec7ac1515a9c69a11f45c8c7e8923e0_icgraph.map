@@ -1,0 +1,4 @@
+<map id="isf::Consumer::consumerProcess" name="isf::Consumer::consumerProcess">
+<area shape="rect" id="node2" href="$classisf_1_1Consumer.html#a5b14f1f185ab40e1c16b5d4df59aaccc" title="Call the client&#45;specified consumerProcess() when a broker notification event is read. " alt="" coords="273,5,493,32"/>
+<area shape="rect" id="node3" href="$classisf_1_1Consumer.html#a9732762b79d90136d9fdb75f7890ec74" title="Push a ParametrizedEvent to the object&#39;s EventManager&#39;s deque. " alt="" coords="541,5,685,32"/>
+</map>

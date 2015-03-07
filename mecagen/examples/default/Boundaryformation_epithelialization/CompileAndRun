@@ -1,0 +1,16 @@
+Boundary Formation / Epithelialization
+
+	Generate input files
+
+		cd ./examples/default/SignalMedToggleSwitch_FlatTissue_grn_default/param
+		make run
+		cd ../state
+		make run
+
+	Compiling
+
+	 	make USE_VBO=1
+
+	Running
+
+		./launchGUI.sh -param examples/default/Boundaryformation_epithelialization/param/param_archive.xml -metaparam examples/default/Boundaryformation_epithelialization/state/metaparam_archive.xml -state examples/default/Boundaryformation_epithelialization/state/state_archive.xml

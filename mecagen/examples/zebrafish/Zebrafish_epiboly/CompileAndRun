@@ -1,0 +1,15 @@
+
+Zebrafish Epiboly
+
+	Generate input files
+
+		cd ./examples/zebrafish/Zebrafish_epiboly
+		make run
+
+	Compiling
+
+	 	make CUSTOM=zebrafish USE_VBO=1
+
+	Running
+
+		./launchGUI.sh -param examples/zebrafish/Zebrafish_epiboly/param_archive.xml -metaparam examples/zebrafish/Zebrafish_epiboly/metaparam_archive.xml -state examples/zebrafish/Zebrafish_epiboly/state_archive.xml

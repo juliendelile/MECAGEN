@@ -1,0 +1,6 @@
+<map id="includes/producerfactory.hpp" name="includes/producerfactory.hpp">
+<area shape="rect" id="node2" href="$consumer_8hpp.html" title="includes/consumer.hpp" alt="" coords="147,80,303,107"/>
+<area shape="rect" id="node3" href="$controller_8hpp.html" title="includes/controller.hpp" alt="" coords="5,155,157,181"/>
+<area shape="rect" id="node4" href="$broker_8cpp.html" title="src/broker.cpp" alt="" coords="182,155,287,181"/>
+<area shape="rect" id="node5" href="$consumer_8cpp.html" title="src/consumer.cpp" alt="" coords="311,155,437,181"/>
+</map>

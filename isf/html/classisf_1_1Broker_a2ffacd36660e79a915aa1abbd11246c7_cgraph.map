@@ -1,0 +1,4 @@
+<map id="isf::Broker::swapBuffers" name="isf::Broker::swapBuffers">
+<area shape="rect" id="node2" href="$classisf_1_1Event.html#abf6e977016ed2c47042602e5664e1a6b" title="Call the method specified in the event. " alt="" coords="245,5,377,32"/>
+<area shape="rect" id="node3" href="$classisf_1_1Broker.html#ac5f4602af66d94c23929fa8c3ec86ce2" title="Call the consumers&#39; public method &quot;notify&quot; when the swap have been executed. " alt="" coords="216,56,405,83"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="includes/SDL_customized_objects.h" name="includes/SDL_customized_objects.h">
+<area shape="rect" id="node2" href="$eventmanager_8hpp.html" title="includes/eventmanager.hpp" alt="" coords="107,96,288,123"/>
+<area shape="rect" id="node4" href="$controller_8hpp.html" title="includes/controller.hpp" alt="" coords="285,245,437,272"/>
+<area shape="rect" id="node3" href="$consumer_8hpp.html" title="includes/consumer.hpp" alt="" coords="119,171,275,197"/>
+<area shape="rect" id="node5" href="$broker_8cpp.html" title="src/broker.cpp" alt="" coords="5,245,109,272"/>
+<area shape="rect" id="node6" href="$consumer_8cpp.html" title="src/consumer.cpp" alt="" coords="134,245,260,272"/>
+</map>

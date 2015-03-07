@@ -1,0 +1,4 @@
+<map id="isf::Consumer::notify" name="isf::Consumer::notify">
+<area shape="rect" id="node2" href="$classisf_1_1Consumer.html#a5b14f1f185ab40e1c16b5d4df59aaccc" title="Call the client&#45;specified consumerProcess() when a broker notification event is read. " alt="" coords="198,5,418,32"/>
+<area shape="rect" id="node3" href="$classisf_1_1Consumer.html#a0ec7ac1515a9c69a11f45c8c7e8923e0" title="Pure virtual function implemented in the client&#45;specified consumer child class. " alt="" coords="467,5,685,32"/>
+</map>

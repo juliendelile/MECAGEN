@@ -1,0 +1,5 @@
+Command to launch flat tissue from 1 cell experiment:
+
+./launchGUI.sh -param examples/default/FlatTissueFrom1cell_grn_default/param/param_archive.xml -state examples/default/FlatTissueFrom1cell_grn_default/state/state_archive.xml -metaparam examples/default/FlatTissueFrom1cell_grn_default/state/metaparam_archive.xml
+
+State/Param/MetaParam files are saved by clicking on the "Save" button of the GUI at the last time step.

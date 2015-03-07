@@ -1,0 +1,13 @@
+<map id="isf::BrokerConfig" name="isf::BrokerConfig">
+<area shape="rect" id="node13" href="$classisf_1_1Broker.html" title="The Broker Class. " alt="" coords="275,245,357,272"/>
+<area shape="rect" id="node3" href="$classisf_1_1Consumer.html" title="The Consumer Class. " alt="" coords="1115,405,1219,432"/>
+<area shape="rect" id="node6" href="$classisf_1_1Event.html" title="isf::Event\&lt; isf::Consumer \&gt;" alt="" coords="1341,391,1525,417"/>
+<area shape="rect" id="node4" href="$classisf_1_1EventManager.html" title="isf::EventManager\&lt;\l isf::Consumer \&gt;" alt="" coords="1856,330,1992,371"/>
+<area shape="rect" id="node7" href="$classisf_1_1ConditionVariable.html" title="isf::ConditionVariable" alt="" coords="777,121,924,148"/>
+<area shape="rect" id="node15" href="$classisf_1_1EventManager.html" title="isf::EventManager\&lt;\l isf::Broker \&gt;" alt="" coords="1099,197,1235,238"/>
+<area shape="rect" id="node8" href="$classisf_1_1Mutex.html" title="isf::Mutex" alt="" coords="811,304,891,331"/>
+<area shape="rect" id="node9" href="$classisf_1_1Uncopyable.html" title="isf::Uncopyable" alt="" coords="509,300,622,327"/>
+<area shape="rect" id="node11" href="$classisf_1_1ConsumerConfig.html" title="ConsumerConfig class. " alt="" coords="779,421,922,448"/>
+<area shape="rect" id="node17" href="$classisf_1_1Event.html" title="isf::Event\&lt; isf::Broker \&gt;" alt="" coords="484,245,647,272"/>
+<area shape="rect" id="node14" href="$classisf_1_1ProducerFactory.html" title="ProducerFactory class. " alt="" coords="6,304,146,331"/>
+</map>

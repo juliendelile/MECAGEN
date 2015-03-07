@@ -1,0 +1,16 @@
+Signal-Mediated Toggle Switch
+
+	Generate input files
+
+		cd ./examples/default/SignalMedToggleSwitch_FlatTissue_grn_default/param
+		make run
+		cd ../state
+		make run
+
+	Compiling
+
+	 	make USE_VBO=1 -j
+
+	Running
+
+		./launchGUI.sh -param examples/default/SignalMedToggleSwitch_FlatTissue_grn_default/param/param_archive.xml -metaparam examples/default/SignalMedToggleSwitch_FlatTissue_grn_default/state/metaparam_archive.xml -state examples/default/SignalMedToggleSwitch_FlatTissue_grn_default/state/state_archive.xml

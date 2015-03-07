@@ -1,0 +1,4 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classisf_1_1ModelBase.html" title="isf::ModelBase\&lt; ModelHost\lOnly\&lt; ModelDerived2, MetaParam,\l Param, State \&gt;, MetaParam,\l Param, Param, State, State \&gt;" alt="" coords="5,5,232,75"/>
+<area shape="rect" id="node2" href="$classisf_1_1ModelHostOnly.html" title="Derived class ModelHostOnly of the model proxy mechanism. " alt="" coords="280,12,480,68"/>
+</map>
