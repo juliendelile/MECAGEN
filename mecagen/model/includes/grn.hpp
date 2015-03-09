@@ -194,7 +194,7 @@ namespace mg {
 
       for(uint i=0;i<numGenes;i++){
         if( isActive(&(genes[i].regEl), &(cellProtQ[0])) ){
-          cellProtQ[ NUMPROTEINmax + genes[i].outputProteinID ] += genes[i].beta * deltaTime;
+          cellProtQ[ NUMPROTEINmax + genes[i].outputProteinID ] += genes[i].gamma * deltaTime;
         }
       }
 

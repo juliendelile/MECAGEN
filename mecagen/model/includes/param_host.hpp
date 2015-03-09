@@ -145,7 +145,7 @@ namespace mg {
             std::cout << " Ligand " << i << " : " << std::endl; 
             std::cout << "            name        " << ligandParams[i].name << std::endl;
             std::cout << "            diffusion   " << ligandParams[i].diffusion << std::endl;
-            std::cout << "            chi         " << ligandParams[i].chi << std::endl;
+            std::cout << "            chi         " << ligandParams[i].kappa << std::endl;
           }
 
           std::cout << "numProteins         : " << numProteins[0]        << std::endl;
@@ -162,7 +162,7 @@ namespace mg {
             else{
               std::cout << std::endl;
               std::cout << "            outputProteinID " << genes[i].outputProteinID << std::endl;
-              std::cout << "            beta            " << genes[i].beta << std::endl;
+              std::cout << "            beta            " << genes[i].gamma << std::endl;
               std::cout << "            numInputProtein " << genes[i].regEl.numInputProtein << std::endl;
               std::cout << "            inputProteinID  "; for(uint j=0; j<genes[i].regEl.numInputProtein;j++){std::cout << genes[i].regEl.inputProteinID[j] << " (" << proteins[genes[i].regEl.inputProteinID[j]].name << ") ";} std::cout << std::endl;
               std::cout << "            inputThreshold  "; for(uint j=0; j<genes[i].regEl.numInputProtein;j++){std::cout << genes[i].regEl.inputThreshold[j] << " ";} std::cout << std::endl;

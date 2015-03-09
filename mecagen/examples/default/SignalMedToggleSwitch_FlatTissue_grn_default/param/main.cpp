@@ -61,7 +61,7 @@ using namespace mg;
     /*** Ligands ***/
     param.numLigands[0] = 1;
     param.ligandParams[0].diffusion = .005; //0.0166667; //.1 / 6.0;
-    param.ligandParams[0].chi =  0.02; //0.015166667; //.1 / 6.0; //.9
+    param.ligandParams[0].kappa =  0.02; //0.015166667; //.1 / 6.0; //.9
     sprintf(param.ligandParams[0].name, "Wnt");
 
     /**** Proteins *******/
@@ -209,7 +209,7 @@ using namespace mg;
 
     // Target
     param.genes[0].outputProteinID = 9;
-    param.genes[0].beta = .1;
+    param.genes[0].gamma = .1;
     param.genes[0].regEl.logicalFunction = 0; // AND function
     param.genes[0].regEl.numInputProtein = 2; 
     param.genes[0].regEl.inputProteinID[0] = 7;   // Tcf+

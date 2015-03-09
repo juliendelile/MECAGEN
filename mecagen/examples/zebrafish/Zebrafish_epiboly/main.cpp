@@ -929,11 +929,11 @@ int main( int argc, const char* argv[] ){
   param.numLigands[0] = 2;
 
   param.ligandParams[0].diffusion = 10.0;
-  param.ligandParams[0].chi =  0.02; 
+  param.ligandParams[0].kappa =  0.02; 
   sprintf(param.ligandParams[0].name, "Evl-lig");
 
   param.ligandParams[1].diffusion = 10.0;
-  param.ligandParams[1].chi =  0.02; 
+  param.ligandParams[1].kappa =  0.02; 
   sprintf(param.ligandParams[1].name, "Yolk-lig");
 
   /**** Proteins *******/

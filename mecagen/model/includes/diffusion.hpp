@@ -121,7 +121,7 @@ namespace mg {
 
       for(uint i=0;i<numLigands;i++){
         // Degradation
-        cellLigQ[2*i+1] -= ligandParams[i].chi * cellLigQ[2*i] * deltaTime;
+        cellLigQ[2*i+1] -= ligandParams[i].kappa * cellLigQ[2*i] * deltaTime;
 
         cellLigandUpdate[NUMLIGmax*idx + i] = cellLigQ[2*i+1];
       }

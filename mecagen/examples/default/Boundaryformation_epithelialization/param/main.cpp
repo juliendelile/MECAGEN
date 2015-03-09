@@ -72,11 +72,11 @@ using namespace mg;
     param.numLigands[0] = 2;
 
     param.ligandParams[0].diffusion = .0;
-    param.ligandParams[0].chi =  0.02; 
+    param.ligandParams[0].kappa =  0.02; 
     sprintf(param.ligandParams[0].name, "Delta-lig");
 
     param.ligandParams[1].diffusion = .0;
-    param.ligandParams[1].chi =  0.02; 
+    param.ligandParams[1].kappa =  0.02; 
     sprintf(param.ligandParams[1].name, "Delto-lig");
 
     /**** Proteins *******/
@@ -192,7 +192,7 @@ using namespace mg;
 
     // Delta
     param.genes[0].outputProteinID = 1;
-    param.genes[0].beta = 1.5;
+    param.genes[0].gamma = 1.5;
     param.genes[0].regEl.logicalFunction = 0; // AND function
     param.genes[0].regEl.numInputProtein = 1; 
     param.genes[0].regEl.inputProteinID[0] = 10;   // Anterior
@@ -201,7 +201,7 @@ using namespace mg;
 
     // Epi
     param.genes[1].outputProteinID = 5;
-    param.genes[1].beta = 1.5;
+    param.genes[1].gamma = 1.5;
     param.genes[1].regEl.logicalFunction = 3; // (Epi-inducer AND X) OR (Epi)
     param.genes[1].regEl.numInputProtein = 3;   
     param.genes[1].regEl.inputProteinID[0] = 4;   // Epi-inducer
@@ -216,7 +216,7 @@ using namespace mg;
 
     // Delto
     param.genes[2].outputProteinID = 2;
-    param.genes[2].beta = 1.5;
+    param.genes[2].gamma = 1.5;
     param.genes[2].regEl.logicalFunction = 0; // AND function
     param.genes[2].regEl.numInputProtein = 1; 
     param.genes[2].regEl.inputProteinID[0] = 5;   // Epi
@@ -225,7 +225,7 @@ using namespace mg;
 
     // Epi_2
     param.genes[3].outputProteinID = 8;
-    param.genes[3].beta = 1.5;
+    param.genes[3].gamma = 1.5;
     param.genes[3].regEl.logicalFunction = 3; // (Epi-inducer AND X) OR (Epi)
     param.genes[3].regEl.numInputProtein = 3;   
     param.genes[3].regEl.inputProteinID[0] = 7;   // Epi_2-inducer
@@ -249,7 +249,7 @@ using namespace mg;
 
     // Anterior
     param.genes[4].outputProteinID = 10;
-    param.genes[4].beta = 1.5;
+    param.genes[4].gamma = 1.5;
     param.genes[4].regEl.logicalFunction = 1; // OR
     param.genes[4].regEl.numInputProtein = 2;   
     param.genes[4].regEl.inputProteinID[0] = 10;   // Anterior 
