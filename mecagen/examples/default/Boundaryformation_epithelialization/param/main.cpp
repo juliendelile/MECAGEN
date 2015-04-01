@@ -124,29 +124,7 @@ using namespace mg;
     param.proteinNodes[1].quantity = 1.0;
 
     /*** PPInteractions ****/
-    param.numPPInteractions[0] = 0;//2;
-
-    param.ppInteractions[0].numReactant         = 2;
-    param.ppInteractions[0].reactantID[0]       = 4;  // Epi-inducer
-    param.ppInteractions[0].x[0]                = 1;  
-    param.ppInteractions[0].alpha[0]            = 4;    
-    param.ppInteractions[0].reactantID[1]       = 5;  // Epi
-    param.ppInteractions[0].x[1]                = 1;  
-    param.ppInteractions[0].alpha[1]            = 0;  // no consumption
-    param.ppInteractions[0].outputProteinID     = 6;  // Epi-inducer-deg
-    param.ppInteractions[0].outputProteinAlpha  = 4;
-    param.ppInteractions[0].k                   = .0002;
-
-    param.ppInteractions[1].numReactant         = 2;
-    param.ppInteractions[1].reactantID[0]       = 7;  // Epi_2-inducer
-    param.ppInteractions[1].x[0]                = 1;  
-    param.ppInteractions[1].alpha[0]            = 4;    
-    param.ppInteractions[1].reactantID[1]       = 8;  // Epi_2
-    param.ppInteractions[1].x[1]                = 1;  
-    param.ppInteractions[1].alpha[1]            = 0;  // no consumption
-    param.ppInteractions[1].outputProteinID     = 9;  // Epi_2-inducer-deg
-    param.ppInteractions[1].outputProteinAlpha  = 4;
-    param.ppInteractions[1].k                   = .0002;
+    param.numPPInteractions[0] = 0;
     
     /*** Receptors ****/
     param.numReceptors[0] = 0;
@@ -202,7 +180,7 @@ using namespace mg;
     // Epi
     param.genes[1].outputProteinID = 5;
     param.genes[1].gamma = 1.5;
-    param.genes[1].regEl.logicalFunction = 3; // (Epi-inducer AND X) OR (Epi)
+    param.genes[1].regEl.logicalFunction = 3; // (Epi-inducer AND NOT Anterior) OR (Epi)
     param.genes[1].regEl.numInputProtein = 3;   
     param.genes[1].regEl.inputProteinID[0] = 4;   // Epi-inducer
     param.genes[1].regEl.inputThreshold[0] = 10.0;
@@ -226,7 +204,7 @@ using namespace mg;
     // Epi_2
     param.genes[3].outputProteinID = 8;
     param.genes[3].gamma = 1.5;
-    param.genes[3].regEl.logicalFunction = 3; // (Epi-inducer AND X) OR (Epi)
+    param.genes[3].regEl.logicalFunction = 3; // (Epi2-inducer AND Anterior) OR (Epi2)
     param.genes[3].regEl.numInputProtein = 3;   
     param.genes[3].regEl.inputProteinID[0] = 7;   // Epi_2-inducer
     param.genes[3].regEl.inputThreshold[0] = 10.0;
@@ -236,16 +214,7 @@ using namespace mg;
     param.genes[3].regEl.inputType[1]      = 1;
     param.genes[3].regEl.inputProteinID[2] = 8;   // Epi_2 (auto-activation)
     param.genes[3].regEl.inputThreshold[2] = 10.0;
-    param.genes[3].regEl.inputType[2]      = 1;    
-    // param.genes[3].regEl.logicalFunction = 0; // (Epi-inducer AND X) OR (Epi)
-    // param.genes[3].regEl.numInputProtein = 2;   
-    // param.genes[3].regEl.inputProteinID[0] = 7;   // Epi_2-inducer
-    // param.genes[3].regEl.inputThreshold[0] = 10.0;
-    // param.genes[3].regEl.inputType[0]      = 1;
-    // param.genes[3].regEl.inputProteinID[1] = 10;   // Anterior
-    // param.genes[3].regEl.inputThreshold[1] = 1.0;
-    // param.genes[3].regEl.inputType[1]      = 1;
-
+    param.genes[3].regEl.inputType[2]      = 1;  
 
     // Anterior
     param.genes[4].outputProteinID = 10;
@@ -298,7 +267,7 @@ using namespace mg;
     param.cellTypeNodes[0].numInputProtein = 0; // Mesenchymal cells
 
     param.cellTypeNodes[1].numInputProtein   = 2; // Epithelial cells
-    param.cellTypeNodes[1].logicalFunction   = 1;     // OR //0; //and 
+    param.cellTypeNodes[1].logicalFunction   = 1;     // OR 
     param.cellTypeNodes[1].inputProteinID[0] = 5;   // Epi
     param.cellTypeNodes[1].inputThreshold[0] = 70.0;
     param.cellTypeNodes[1].inputType[0]      = 1;

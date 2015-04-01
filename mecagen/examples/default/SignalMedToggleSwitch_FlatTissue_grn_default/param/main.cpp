@@ -47,7 +47,7 @@ using namespace mg;
     /***** MechaParams ****/
     for(uint i=0; i<3; i++){
       for(uint j=0; j<3; j++){
-        param.mechaParams[0].maximumDistanceCoefficient[3*i+j]     = 1.6;//1.2414;
+        param.mechaParams[0].maximumDistanceCoefficient[3*i+j]     = 1.6;
         param.mechaParams[0].surfaceScaling[3*i+j]                 = 1.3697;
         param.mechaParams[0].equilibriumDistanceCoefficient[3*i+j] = 0.9523128;
         param.mechaParams[0].repulsionCoefficient[3*i+j]           = 100.0;
@@ -60,33 +60,33 @@ using namespace mg;
     
     /*** Ligands ***/
     param.numLigands[0] = 1;
-    param.ligandParams[0].diffusion = .005; //0.0166667; //.1 / 6.0;
-    param.ligandParams[0].kappa =  0.02; //0.015166667; //.1 / 6.0; //.9
+    param.ligandParams[0].diffusion = .005;
+    param.ligandParams[0].kappa =  0.02;
     sprintf(param.ligandParams[0].name, "Wnt");
 
     /**** Proteins *******/
     param.numProteins[0] = 11;
-    param.proteins[0].kappa = .03 / 6.0; //.97;
+    param.proteins[0].kappa = .005;
     sprintf(param.proteins[0].name, "X");
-    param.proteins[1].kappa = .01 / 6.0; //.99;
+    param.proteins[1].kappa = 0.0016666;
     sprintf(param.proteins[1].name, "Frizzled");
-    param.proteins[2].kappa = .01 / 6.0; //.99;
+    param.proteins[2].kappa = 0.0016666;
     sprintf(param.proteins[2].name, "XIAP-inducer");
-    param.proteins[3].kappa = .04 / 6.0; //.99;
+    param.proteins[3].kappa = 0.0066666;
     sprintf(param.proteins[3].name, "Beta-catenin");
-    param.proteins[4].kappa = .01 / 6.0; //.99;
+    param.proteins[4].kappa = 0.0016666;
     sprintf(param.proteins[4].name, "XIAP");
-    param.proteins[5].kappa = .01 / 6.0; //.99;
+    param.proteins[5].kappa = 0.0016666;
     sprintf(param.proteins[5].name, "Tcf");
-    param.proteins[6].kappa = .01 / 6.0; //.99;
+    param.proteins[6].kappa = 0.0016666;
     sprintf(param.proteins[6].name, "Gro");
-    param.proteins[7].kappa = .01 / 6.0; //.99;
+    param.proteins[7].kappa = 0.0016666;
     sprintf(param.proteins[7].name, "Tcf+");
-    param.proteins[8].kappa = .01 / 6.0; //.99;
+    param.proteins[8].kappa = 0.0016666;
     sprintf(param.proteins[8].name, "Tcf-");
-    param.proteins[9].kappa = .01 / 6.0; //.99;
+    param.proteins[9].kappa = 0.0016666;
     sprintf(param.proteins[9].name, "Target");
-    param.proteins[10].kappa = .01 / 6.0; //.99;
+    param.proteins[10].kappa = 0.0016666;
     // sprintf(param.proteins[10].name, "Gro_Ubiquitinated");
     sprintf(param.proteins[10].name, "Gro^{Ubi}");
 
@@ -98,7 +98,7 @@ using namespace mg;
     param.proteinNodes[0].outputProteinID = 0;
     param.proteinNodes[0].Xmin = d3(-10000.0,-10000.0,-10000.0);
     param.proteinNodes[0].Xmax = d3(0.0,0.0,10000.0);
-    param.proteinNodes[0].tmin = 200;
+    param.proteinNodes[0].tmin = 200;   // 200 time steps -> 20 minutes
     param.proteinNodes[0].tmax = 10000;
     param.proteinNodes[0].quantity = 1.3;
     
@@ -202,7 +202,7 @@ using namespace mg;
 
     param.secretors[0].outputLigandID = 0;
     param.secretors[0].inputProteinID = 0;
-    param.secretors[0].sigma = .1 / 6.0;
+    param.secretors[0].sigma = 0.0166666;
 
     /*** Genes ****/
     param.numGenes[0] = 1;

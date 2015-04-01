@@ -213,7 +213,7 @@ namespace mg {
   struct Gene{
     RegulatoryElement regEl;
     uint outputProteinID;
-    double beta;
+    double gamma;
 
     private:
     friend class boost::serialization::access;
@@ -224,7 +224,7 @@ namespace mg {
         ar  
             & BOOST_SERIALIZATION_NVP(regEl)
             & BOOST_SERIALIZATION_NVP(outputProteinID)
-            & BOOST_SERIALIZATION_NVP(beta)
+            & BOOST_SERIALIZATION_NVP(gamma)
           ;
       }
   };

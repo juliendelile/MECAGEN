@@ -2,6 +2,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 import sys
 
+print "test"
+
 plt.rc('text', usetex=False)
 plt.rc('font', family='Arial')
 
@@ -9,7 +11,7 @@ plt.rc('font', family='Arial')
 ##### Read command line ######
 ##############################
 
-#python grnstate_plot_v2.py --tmin 1 --tmax 99 --folder_path /data/Work/Publications/2014_Methodo_MecaGen/Mecagen\ Methodo\ paper\ \(J.\ Delile\)/schematics/Figure3/data_smts/ --id 300 --color  /data/Work/Publications/2014_Methodo_MecaGen/Mecagen\ Methodo\ paper\ \(J.\ Delile\)/schematics/Figure3/color.csv --filter_path /data/Work/Publications/2014_Methodo_MecaGen/Mecagen\ Methodo\ paper\ \(J.\ Delile\)/schematics/Figure3/filter.csv --output_path /home/julien/Desktop/test.png
+# python grnstate_plot_v2.py --tmin 1 --tmax 99 --folder_path /data/Work/Publications/2014_Methodo_MecaGen/Mecagen\ Methodo\ paper\ \(J.\ Delile\)/schematics/Figure3/data_smts/ --color  /data/Work/Publications/2014_Methodo_MecaGen/Mecagen\ Methodo\ paper\ \(J.\ Delile\)/schematics/Figure3/color.csv --filter_path /data/Work/Publications/2014_Methodo_MecaGen/Mecagen\ Methodo\ paper\ \(J.\ Delile\)/schematics/Figure3/filter.csv --output_path /home/julien/Desktop/test.png --id=346
 
 import optparse
 
@@ -108,9 +110,8 @@ else:
 #####         Plot     #######
 ##############################
 
-# plt.figure(figsize=(8, 6), dpi = 300)
-# plt.figure(figsize=(1.8, 1.8), dpi = 300)
-plt.figure(figsize=(8.15, 2.15), dpi = 300)
+plt.figure(figsize=(2.15, 2.15), dpi = 300)
+# plt.figure(figsize=(8.15, 2.15), dpi = 300)
 
 plt.grid(linewidth=.3)
 
@@ -124,10 +125,12 @@ for i, name in enumerate(molnames):
   if filter_data[i]==[1.0]:
     # plt.plot(ts_space, molq[name][ts_space], marker = marker.next(), color=color_data[i], linestyle='-', markersize=6, markeredgecolor=None, markeredgewidth=0, linewidth=1)
     plt.plot(ts_space, molq[name][ts_space],color=color_data[i], linestyle='-', linewidth=1.0)
+  elif filter_data[i]==[2.0]:
+    plt.plot(ts_space, molq[name][ts_space],color=color_data[i], linestyle='--', dashes=(6,2), linewidth=1.0)
   
 ymax = 0
 for idx, name in enumerate(molnames):
-  if filter_data[idx]==[1.0]:
+  if filter_data[idx]==[1.0] or filter_data[idx]==[2.0]:
     ymax = max(max(molq[name]), ymax)
 
 plt.ylim(-.05 * ymax, 1.05 * ymax)
@@ -142,14 +145,14 @@ ax.set_position([box.x0, box.y0, box.width, box.height])
 molnames_dollar=[0]*len(molnames) #{}
 i=0
 for idx, name in enumerate(molnames):
-    if filter_data[idx]==[1.0]:
+    if filter_data[idx]==[1.0] or filter_data[idx]==[2.0]:
       # molnames_dollar[i] = '$'+name+'$'
       molnames_dollar[i] = name
       i=i+1
 
 # Put a legend to the right of the current axis
 # ax.set_position([box.x0 , box.y0, box.width * 0.2, box.height])
-# ax.legend(molnames_dollar, loc='center left', bbox_to_anchor=(1, 0.5), fontsize = 8, ncol=4)
+# ax.legend(molnames_dollar, loc='center left', bbox_to_anchor=(1, 0.5), fontsize = 8, ncol=1)
 
 # Labels
 # plt.xlabel('Time (min)', fontsize = 8)

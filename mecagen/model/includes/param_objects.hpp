@@ -54,7 +54,7 @@ namespace mg {
 
   struct LigandParams{
     double diffusion;
-    double chi;
+    double kappa;
     char name[300];
 
     private:
@@ -64,7 +64,7 @@ namespace mg {
       void serialize(Archive & ar, const unsigned int version){
 
         ar  & BOOST_SERIALIZATION_NVP(diffusion)
-          & BOOST_SERIALIZATION_NVP(chi)
+          & BOOST_SERIALIZATION_NVP(kappa)
           & BOOST_SERIALIZATION_NVP(name)
           ;
       }
