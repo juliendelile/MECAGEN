@@ -45,6 +45,7 @@ $(OBJECTS): %.o: %.cpp $(HEADERS)
 	$(CC) $(CFLAGS) -I$(INC) $(ISDL) -c $< -o $@
 
 $(ARTARGET): $(OBJECTS)
+	mkdir -p lib
 	$(AR) $@ $(OBJECTS)
 
 #$(SOTARGET): $(OBJECTS)
