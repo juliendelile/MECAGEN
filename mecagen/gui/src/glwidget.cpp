@@ -618,7 +618,7 @@ namespace mg{
   		glRasterPos2f(20, 20);
 
   		sprintf(c,"T = %3.2lf hpf / %d TS / %d cells",
-  		    (mg_buf->TS * param->deltaTime[0] / 3600.0) + 3.0, mg_buf->TS, numCells);
+  		    (mg_buf->TS * param->deltaTime[0] / 3600.0) + 4.0, mg_buf->TS, numCells);
   		// glPrint(c);
 
   		int i=0;
