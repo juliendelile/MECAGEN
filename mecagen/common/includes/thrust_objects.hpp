@@ -25,6 +25,7 @@
 
 #include <thrust/device_vector.h>
 #include <thrust/host_vector.h>
+#include <thrust/extrema.h> 
 
 #include "nvVector.h"
 
