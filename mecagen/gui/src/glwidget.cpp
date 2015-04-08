@@ -1116,14 +1116,14 @@ namespace mg{
 
     //if(mg_buf){
 
-    if(newDataAvailable){
+    if(newDataAvailable.testAndSetOrdered(1,0)){
       numCells = mg_buf->numCells;
       updateDeviceArrays();
-      newDataAvailable = 0;
+      // newDataAvailable = 0;
     }
-    else if(newParamAvailable){
+    else if(newParamAvailable.testAndSetOrdered(1,0)){
       updateDeviceArrays();
-      newParamAvailable = 0;
+      // newParamAvailable = 0;
     }
 
     //clipping plane

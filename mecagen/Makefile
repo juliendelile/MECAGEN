@@ -7,8 +7,10 @@
 
 # QT (Edit required):
 # Write yout QT "include" and "lib" paths here:
-export QTINCLUDEPATH ?= /data/Work/Applications/Qt/new/5.3/gcc_64/include
-export QTLIBPATH ?= /data/Work/Applications/Qt/new/5.3/gcc_64/lib
+# export QTINCLUDEPATH ?= /data/Work/Applications/Qt/new/5.3/gcc_64/include
+export QTINCLUDEPATH ?= /usr/include/qt5
+# export QTLIBPATH ?= /data/Work/Applications/Qt/new/5.3/gcc_64/lib
+export QTLIBPATH ?= /usr/lib/x86_64-linux-gnu
 
 # Edit on of the following options, and comment the other
 

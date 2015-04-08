@@ -91,6 +91,7 @@ endif
 
 ### The final step is just linking everything together with the libs
 all: $(OBJECTS)
+	mkdir -p bin
 	$(LINKER) $(OBJECTS) -o ./bin/mecagenGUI $(LIBS)
 	# $(LINKER) -fpic -fopenmp $(OBJECTS) -o ./bin/mecagenGUI $(LIBS)
 
