@@ -46,7 +46,8 @@ The QT library folder must be in the LIBRARY_PATH environment variable and the 
 
 * (Optional but recommended) [CUDA 5.5](https://developer.nvidia.com/cuda-toolkit-55-archive) or newer
 
-Cuda is required to enable an enhanced rendering of the simulations. It uses Vertex Buffer Object to interoperate with OpenGL. 
+Cuda is required to enable an enhanced rendering of the simulations. It uses Vertex Buffer Object to interoperate with OpenGL. The folder containing the Nvidia Cuda Compiler (nvcc) must be the PATH environment variable.
+
 ```shell
 sudo apt-get install nvidia-cuda-toolkit
 ```
@@ -58,7 +59,7 @@ Thrust is included with Cuda. Yet if you install MECAGEN without Cuda, the Thrus
 ##### Compilation
 
 
-First, edit the [mecagen makefile](mecagen/Makefile) by adding your installation paths for QT, Cuda and Thrust (the edit section is indicated on top of the file).
+First, edit the user paths file [(user_paths_MUST_BE_EDITED_FIRST)](user_paths_MUST_BE_EDITED_FIRST) by specifying your installation paths for QT, and Cuda or Thrust.
 
 Then, decide which custom version of MECAGEN you want to use. Indeed, one of the specificities of the MECAGEN platform is the possibility to integrate external customization code to simulate specific structures and behaviors such as for example extra-embryonic tissue. Currently, two custom versions are available: the "default" custom version performs regular MECAGEN simulation without specific structure or behavior, and the "zebrafish" custom version adds rules for the yolk cell and the enveloping layer. 
 

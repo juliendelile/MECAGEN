@@ -1,32 +1,3 @@
-
-
-
-# **************************************
-# EDIT THE FOLLOWING SECTION: QT/Cuda/Thrust paths
-# **************************************
-
-# QT (Edit required):
-# Write yout QT "include" and "lib" paths here:
-export QTINCLUDEPATH ?= /usr/include/qt5
-export QTLIBPATH ?= /usr/lib/x86_64-linux-gnu/qt5
-
-# Edit on of the following options, and comment the other
-
-# Option 1: 
-# Write your cuda path here if you plan to use the Cuda/VBO rendering
-export CUDAPATH ?= /usr/local/cuda
-export THRUSTPATH  ?= $(CUDAPATH)/include
-
-# Option 2:
-# Write below the path which contains the thurst folder if you do not plan to use the Cuda/VBO rendering.
-# export THRUSTPATH ?= /data/Work/Applications/libraries
-
-# **************************************
-# END OF SECTION REQUIRING EDITING
-# **************************************
-
-
-
 ########################################################################################################################
 # Project version:
 ########################################################################################################################
@@ -44,6 +15,29 @@ export COMPATH        := $(abspath ./common)
 export MODELPATH      := $(abspath ./model)
 export PRODUCERSPATH  := $(abspath ./producers)
 export CONSUMERSPATH  := $(abspath ./consumers)
+
+########################################################################################################################
+# QT and Cuda/Thrust paths:
+########################################################################################################################
+
+# QT
+export QTINCLUDEPATH ?= $(shell cat ../user_paths_MUST_BE_EDITED_FIRST | grep -Po '(?<=QTINCLUDEPATH=).+')
+export QTLIBPATH ?= $(shell cat ../user_paths_MUST_BE_EDITED_FIRST | grep -Po '(?<=QTLIBPATH=).+')
+
+# Use vbo and cuda iff CUDAPATH is not commented in user_paths_MUST_BE_EDITED_FIRST file
+cudamode = $(shell cat ../user_paths_MUST_BE_EDITED_FIRST | grep -q '^CUDAPATH' && echo "1")
+# $(info $(cudamode))
+ifeq ($(cudamode), 1)
+	# Option 1: Cuda/VBO rendering
+	export USE_VBO ?= 1
+	export CUDAPATH ?= $(shell cat ../user_paths_MUST_BE_EDITED_FIRST | grep -Po '(?<=CUDAPATH=).+')
+	export THRUSTPATH  ?= $(CUDAPATH)/include
+else
+	# Option 2: Simple rendering
+	export THRUSTPATH ?= $(shell cat ../user_paths_MUST_BE_EDITED_FIRST | grep -Po '(?<=THRUSTPATH=).+')
+endif
+
+$(info $(THRUSTPATH))
 
 ########################################################################################################################
 # Project compilation & linking variables:
@@ -263,7 +257,7 @@ clean:
 # Same thing for propper
 propper: clean
 	- $(MAKE) propper   -C ./gui        # Qt distclean command
-	- $(MAKE) propper   -C ./explo
+	# - $(MAKE) propper   -C ./explo
 	- $(MAKE) propper   -C $(MODELPATH)
 	- $(MAKE) propper   -C $(PRODUCERSPATH)
 	- $(MAKE) propper   -C $(CONSUMERSPATH)
