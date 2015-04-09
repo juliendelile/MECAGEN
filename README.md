@@ -58,8 +58,7 @@ Thrust is included with Cuda. Yet if you install MECAGEN without Cuda, the Thrus
 
 ##### Compilation
 
-
-First, edit the user paths file [(user_paths_MUST_BE_EDITED_FIRST)](user_paths_MUST_BE_EDITED_FIRST) by specifying your installation paths for QT, and Cuda or Thrust.
+First, edit the user paths file [(user_paths_MUST_BE_EDITED_FIRST)](user_paths_MUST_BE_EDITED_FIRST) by specifying your installation paths for QT, and Cuda or Thrust. If Cuda is installed on your system, we recommend that you compile MECAGEN with the VBO/Cuda version of the cells rendering by using the first option in the file.
 
 Then, decide which custom version of MECAGEN you want to use. Indeed, one of the specificities of the MECAGEN platform is the possibility to integrate external customization code to simulate specific structures and behaviors such as for example extra-embryonic tissue. Currently, two custom versions are available: the "default" custom version performs regular MECAGEN simulation without specific structure or behavior, and the "zebrafish" custom version adds rules for the yolk cell and the enveloping layer. 
 
@@ -73,18 +72,6 @@ or the zebrafish version
 
 ```shell
 make CUSTOM=zebrafish
-```
-
-Moreover, if Cuda is installed on your system, we recommend that you compile MECAGEN with the VBO/Cuda version of the cells rendering by invoking "USE_VBO=1" with the make command line.
-
-```shell
-make CUSTOM=default USE_VBO=1
-```
-
-or 
-
-```shell
-make CUSTOM=zebrafish USE_VBO=1
 ```
 
 All generated files are cleaned by the following command
