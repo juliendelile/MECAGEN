@@ -2,7 +2,6 @@
 *.o
 *.so
 *.so.1.0
-*.xml
 MecaGen_Project/mecagen/compiler_flags_vbo
 MecaGen_Project/mecagen/compiler_flags_mode
 *.so.1.0.0

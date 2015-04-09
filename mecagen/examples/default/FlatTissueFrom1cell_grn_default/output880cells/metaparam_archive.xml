@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<!DOCTYPE boost_serialization>
+<boost_serialization signature="serialization::archive" version="10">
+<myObject class_id="0" tracking_level="0" version="0">
+	<numCellsMax class_id="1" tracking_level="0" version="0">
+		<stl_vec>
+			<count>1</count>
+			<item_version>0</item_version>
+			<item>10000</item>
+		</stl_vec>
+	</numCellsMax>
+	<gridBox_NumPartMax>
+		<stl_vec>
+			<count>1</count>
+			<item_version>0</item_version>
+			<item>500</item>
+		</stl_vec>
+	</gridBox_NumPartMax>
+	<grid_SizeMax>
+		<stl_vec>
+			<count>1</count>
+			<item_version>0</item_version>
+			<item>64</item>
+		</stl_vec>
+	</grid_SizeMax>
+	<numNeighbMax>
+		<stl_vec>
+			<count>1</count>
+			<item_version>0</item_version>
+			<item>200</item>
+		</stl_vec>
+	</numNeighbMax>
+	<spatialBorderMin class_id="3" tracking_level="0" version="0">
+		<stl_vec class_id="4" tracking_level="0" version="0">
+			<count>1</count>
+			<item_version>0</item_version>
+			<item class_id="5" tracking_level="0" version="0">
+				<x>-215</x>
+				<y>-215</y>
+				<z>-1</z>
+			</item>
+		</stl_vec>
+	</spatialBorderMin>
+	<spatialBorderMax>
+		<stl_vec>
+			<count>1</count>
+			<item_version>0</item_version>
+			<item>
+				<x>215</x>
+				<y>215</y>
+				<z>1</z>
+			</item>
+		</stl_vec>
+	</spatialBorderMax>
+	<devtime_minutes_init>
+		<stl_vec>
+			<count>1</count>
+			<item_version>0</item_version>
+			<item>0</item>
+		</stl_vec>
+	</devtime_minutes_init>
+	<embryoAxes>
+		<stl_vec>
+			<count>3</count>
+			<item_version>0</item_version>
+			<item>
+				<x>1</x>
+				<y>0</y>
+				<z>0</z>
+			</item>
+			<item>
+				<x>0</x>
+				<y>1</y>
+				<z>0</z>
+			</item>
+			<item>
+				<x>0</x>
+				<y>0</y>
+				<z>1</z>
+			</item>
+		</stl_vec>
+	</embryoAxes>
+	<displayScale class_id="6" tracking_level="0" version="0">
+		<stl_vec>
+			<count>1</count>
+			<item_version>0</item_version>
+			<item>300</item>
+		</stl_vec>
+	</displayScale>
+</myObject>
+</boost_serialization>
+
