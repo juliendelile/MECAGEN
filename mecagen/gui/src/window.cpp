@@ -53,17 +53,20 @@ namespace mg{
     recordingWidget = new RecordingWidget(glWidget, this);
     recordingWidget->hide();
 
-    playButton = new QPushButton("&Play", this);
+    playButton = new QPushButton("Start", this);
     pauseButton = new QPushButton("Pause", this);
-    plusOneButton = new QPushButton("+1", this);
-    disConButton = new QRadioButton("Display", this);
+    pauseButton->setEnabled(false);
+    plusOneButton = new QPushButton("Next Timestep", this);
+    disConButton = new QCheckBox("Display Control", this);
     disConButton->setAutoExclusive(false);
+    // disConButton->setChecked(true);
     // customParamButton = new QRadioButton("Simulation Param", this);
     // customParamButton->setAutoExclusive(false);
-    recordSnapButton = new QRadioButton("Snapshot", this);
+    recordSnapButton = new QCheckBox("Snapshot Tools", this);
     recordSnapButton->setAutoExclusive(false);
-    recordStateParamButton = new QRadioButton("Save", this);
-    recordStateParamButton->setAutoExclusive(false);
+
+    recordStateParamButton = new QPushButton("Save Current State (xml files)", this);
+    // recordStateParamButton->setAutoExclusive(false);
 
     connect(playButton, SIGNAL(clicked(bool)), this, SLOT(callStart()));
     connect(pauseButton, SIGNAL(clicked(bool)), this, SLOT(callPause()));
@@ -71,7 +74,7 @@ namespace mg{
     connect(disConButton, SIGNAL(toggled(bool)), this, SLOT(showHideDisplayControl()));
     //connect(customParamButton, SIGNAL(toggled(bool)), this, SLOT(showHideCustomParam()));
     connect(recordSnapButton, SIGNAL(toggled(bool)), this, SLOT(showHideRecording()));
-    connect(recordStateParamButton, SIGNAL(toggled(bool)), this, SLOT(saveStateParam()));
+    connect(recordStateParamButton, SIGNAL(clicked(bool)), this, SLOT(saveStateParam()));
 
     QHBoxLayout *buttonLayout = new QHBoxLayout;
     buttonLayout->addWidget(playButton);
@@ -176,6 +179,16 @@ namespace mg{
     if(!((*c)->isPause() || (*c)->isOver())){
       return;
     }
+
+    playButton->setText("Restart");
+    playButton->setEnabled(false);
+
+    pauseButton->setText("Pause");
+    pauseButton->setEnabled(true);
+
+    plusOneButton->setEnabled(false);
+    
+
     //change seeds
     // int seedGauss = (int)(400000.0 * rand()/ (double) RAND_MAX);
     // int seedUnif = (int)(400000.0 * rand()/ (double) RAND_MAX);
@@ -196,11 +209,28 @@ namespace mg{
   }
 
   void Window::callPause(){
+
+    if(pauseButton->text() == "Play"){ // Set to play
+      pauseButton->setText("Pause");
+      playButton->setEnabled(false);
+      plusOneButton->setEnabled(false);
+    }
+    else{
+      pauseButton->setText("Play");   // set to pause
+      playButton->setEnabled(true);
+      plusOneButton->setEnabled(true);
+    }
+
     (*c)->playPause();
   }
 
   void Window::callPlusOne(){
-    std::cout << "plus one "<< std::endl;
+    // std::cout << "plus one "<< std::endl;
+
+    playButton->setText("Restart"); // in case +1 is hit first
+
+    pauseButton->setEnabled(false);
+
     (*c)->setParam(param);
     (*c)->setTimeInterval((*c)->getCurrentTimeStep(), (*c)->getCurrentTimeStep());
     (*c)->start();

@@ -30,6 +30,7 @@
 #include <QWidget>      // Base Qt widget class
 #include <QPushButton>
 #include <QRadioButton>
+#include <QCheckBox>
 #include <QSlider>
 
 // Project includes
@@ -92,10 +93,10 @@ namespace mg{
       QPushButton * playButton;
       QPushButton * pauseButton;
       QPushButton * plusOneButton;
-      QRadioButton * disConButton;
+      QCheckBox * disConButton;
       QRadioButton * customParamButton;
-      QRadioButton * recordSnapButton;
-      QRadioButton * recordStateParamButton;
+      QCheckBox * recordSnapButton;
+      QPushButton * recordStateParamButton;
 
       // Controller to talk to:
       isf::Controller< MetaParam<HOST>, Param_Host, State_Host >** c;

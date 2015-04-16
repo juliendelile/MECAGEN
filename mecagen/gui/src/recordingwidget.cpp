@@ -55,7 +55,7 @@ namespace mg{
     
     setMinimumSize(300,300);
 
-    setWindowTitle(tr("Display Control"));
+    setWindowTitle(tr("Snapshot Tools"));
 
   }
 

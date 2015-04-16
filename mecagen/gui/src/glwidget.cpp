@@ -483,8 +483,11 @@ namespace mg{
 
     		  for(uint j=0; j < mg_buf->cellTopologicalNeighbNum[i]; j++ ){
     		    uint neighbId = mg_buf->cellTopologicalNeighbId[i * NUMNEIGHBTOPOmax + j];
-    		    glVertex3dv((double *)&(mg_buf->cellPosition[i]));
-    		    glVertex3dv((double *)&(mg_buf->cellPosition[neighbId]));
+
+            if(slice(mg_buf->cellPosition[neighbId])){
+      		    glVertex3dv((double *)&(mg_buf->cellPosition[i]));
+      		    glVertex3dv((double *)&(mg_buf->cellPosition[neighbId]));
+            } 
     		  }
   		  }
       }
