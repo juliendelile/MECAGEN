@@ -4,7 +4,7 @@ echo "Please select one of the following examples:"
 
 PS3=''
 
-option1="Signal Mediated-Toggle Switch             (MECAGEN must be compiled in *default* mode)"
+option1="Signal-Mediated Toggle Switch             (MECAGEN must be compiled in *default* mode)"
 option2="Boundary Formation and Epithelialization  (MECAGEN must be compiled in *default* mode)"
 option3="Zebrafish Epiboly Phase 1                 (MECAGEN must be compiled in *zebrafish* mode)"
 
