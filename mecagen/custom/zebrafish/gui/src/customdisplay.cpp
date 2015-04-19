@@ -60,7 +60,16 @@ namespace mg{
           mg_buf->customStateBuffer.yolkPosition[i].x,
           mg_buf->customStateBuffer.yolkPosition[i].y,
           mg_buf->customStateBuffer.yolkPosition[i].z);
-        glutSolidSphere(.01,10,10); 
+        
+        // glutSolidSphere(.01,10,10); 
+
+        GLUquadricObj *quadObj = gluNewQuadric();
+        gluQuadricDrawStyle(quadObj, GLU_FILL);
+        gluQuadricNormals(quadObj, GLU_SMOOTH);
+        gluSphere(quadObj, .01, 10, 10);
+        gluDeleteQuadric(quadObj);
+
+
         // glutSolidSphere(APF_2D_RAD*mg_buf->customStateBuffer.yolkInteriorRadius[0],10,10); 
         glPopMatrix();
       }
@@ -115,7 +124,15 @@ namespace mg{
           mg_buf->customStateBuffer.evlPosition[i].x,
           mg_buf->customStateBuffer.evlPosition[i].y,
           mg_buf->customStateBuffer.evlPosition[i].z);
-        glutSolidSphere(.01,10,10); 
+
+        // glutSolidSphere(.01,10,10); 
+        
+        GLUquadricObj *quadObj = gluNewQuadric();
+        gluQuadricDrawStyle(quadObj, GLU_FILL);
+        gluQuadricNormals(quadObj, GLU_SMOOTH);
+        gluSphere(quadObj, .01, 10, 10);
+        gluDeleteQuadric(quadObj);
+
         glPopMatrix();
       }
     }

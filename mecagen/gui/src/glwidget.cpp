@@ -576,7 +576,15 @@ namespace mg{
           //solid sphere
           glPushMatrix();
           glTranslated(mg_buf->cellPosition[i].x,mg_buf->cellPosition[i].y,mg_buf->cellPosition[i].z);
-          glutSolidSphere(.5*mg_buf->cellRadius[i].x,10,10); 
+          
+          // glutSolidSphere(.5*mg_buf->cellRadius[i].x,10,10); 
+          
+          GLUquadricObj *quadObj = gluNewQuadric();
+          gluQuadricDrawStyle(quadObj, GLU_FILL);
+          gluQuadricNormals(quadObj, GLU_SMOOTH);
+          gluSphere(quadObj, .5*mg_buf->cellRadius[i].x, 10, 10);
+          gluDeleteQuadric(quadObj);
+          
           glPopMatrix();
 
           //XXX version papier epiboly
