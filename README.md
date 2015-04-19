@@ -118,7 +118,7 @@ Once input files are generated, MECAGEN simulations can be started by running t
 
 ##### Support videos
 
-Two videos demonstrates the previous instructions and are accessible on youtube:
+Two videos demonstrate the previous instructions and are accessible on youtube:
 
 * the [first video](https://www.youtube.com/watch?v=d79v7MDPIBw) details the procedure required to compile and run the "zebrafish" mode simulation with Cuda/VBO rendering.
 * the [second video](https://www.youtube.com/watch?v=5zcLAL-caDQ) details the procedure required to compile and run the "default" mode simulations without the Cuda/VBO rendering. 
