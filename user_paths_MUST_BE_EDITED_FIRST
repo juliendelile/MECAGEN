@@ -15,5 +15,5 @@ QTLIBPATH=/usr/lib/x86_64-linux-gnu/qt5
 CUDAPATH=/usr/local/cuda
 
 # Option 2:
-# Write below the path which contains the thurst folder if you do not plan to use the Cuda/VBO rendering.
+# Write below the path which contains the thurst folder (not the thurst folder itself !) if you do not plan to use the Cuda/VBO rendering.
 # THRUSTPATH=/data/Work/Applications/libraries

@@ -26,6 +26,7 @@
 #include "custom_objects.hpp"
 
 #include <stdio.h>
+#include <set>
 
 using namespace mg;
 
@@ -119,7 +120,7 @@ int main( int argc, const char* argv[] ){
     state.cellGeneration[i] = 0;
     int ccl = (int)(distribution(generator));
     while(ccl<=0){
-      printf("Error lifetime less than 0 : cell %d   lifetime %d\n", i,ccl);
+      // printf("Error lifetime less than 0 : cell %d   lifetime %d\n", i,ccl);
       ccl = (int)(distribution(generator));
     }
     assert(ccl > 0);

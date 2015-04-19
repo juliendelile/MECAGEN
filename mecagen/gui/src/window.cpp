@@ -169,6 +169,11 @@ namespace mg{
     }
   }
 
+  void Window::wheelEvent (QWheelEvent * event)
+  {
+    event->delta() > 0 ? glWidget->scale += glWidget->scale*0.1 : glWidget->scale -= glWidget->scale*0.1;
+  }
+
   //
   // Gui buttons slots:
   //

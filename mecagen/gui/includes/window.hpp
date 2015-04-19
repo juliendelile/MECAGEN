@@ -87,6 +87,7 @@ namespace mg{
       // Private functions:
       // QSlider * createSlider(int rmin, int rmax, int step);
       void keyPressEvent(QKeyEvent *event);
+      void wheelEvent (QWheelEvent * event);
       // void initSlideêrs();
 
       // Gui buttons:

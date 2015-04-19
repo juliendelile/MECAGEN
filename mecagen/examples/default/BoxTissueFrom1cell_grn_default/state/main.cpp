@@ -91,7 +91,7 @@ using namespace mg;
       state.cellGeneration[i] = 0;
       int ccl = (int)(distribution(generator));
       if(ccl<=0){
-        printf("Error lifetime less than 0 : cell %d   lifetime %d\n", i,ccl);
+        // printf("Error lifetime less than 0 : cell %d   lifetime %d\n", i,ccl);
       }
       assert(ccl > 0);
       state.cellCycleLength[i] = (uint)ccl;
