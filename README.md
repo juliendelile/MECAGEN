@@ -74,7 +74,7 @@ or the zebrafish version
 make CUSTOM=zebrafish
 ```
 
-All generated files are cleaned by the following command
+When you switch between the two custom versions, all generated files must be cleaned from your system with the following command
 
 ```shell
 make propper
