@@ -114,7 +114,7 @@ cd mecagen
 
 ##### Run examples
 
-Once input files are generated, MECAGEN simulations can be started by running the [run_examples.sh](mecagen/run_examples.sh) script. 
+Once input files are generated, MECAGEN simulations can be started by running the [run_examples.sh](mecagen/run_examples.sh) script. If the execution returns prematurely with "gpuassert", please start the script with sudo: "sudo run_examples.sh".
 
 ##### Support videos
 
@@ -126,4 +126,3 @@ Two videos demonstrate the previous instructions and are accessible on youtube:
 ### License
 
 MECAGEN is released under the GNU General Public License v3.0; see LICENSE for more details.
-
