@@ -49,21 +49,21 @@ sudo apt-get install nvidia-cuda-toolkit
 
 #### 1.3. Compilation
 
-Then, decide which custom version of MecaGen you want to use. Indeed, one of the specificities of the MecaGen platform is the possibility to integrate external customization code to simulate specific structures and behaviors such as for example extra-embryonic tissue. Currently, two custom versions are available: the "default" custom version performs regular MecaGen simulation without specific structure or behavior, and the "zebrafish" custom version adds rules for the yolk cell and the enveloping layer. 
+At this stage, compilation options will depend on the examples you want to run. This is because the MecaGen platform was designed to allow integration with external custom code, in order to simulate specific structures such as extraembryonic tissue. Currently, two versions are available: (a) a "default" version executing regular MecaGen simulations without custom code, and (b) a "zebrafish" version that includes special rules for the yolk particles and enveloping layer (EVL) cells.
 
-It is not currently possible to compile both custom version at the same time so you have to choose whether you want to compile the default version with the [parent makefile](Makefile)
+(a) To compile MecaGen in the "default" mode and run Case Study 1 (pattern formation) or Case Study 2 (epithelial differentiation), enter the following command:
 
 ```shell
 make CUSTOM=default
 ```
 
-or the zebrafish version
+(b) To compile MecaGen in the "zebrafish" mode, and run Case Study 3 (epiboly), enter:
 
 ```shell
 make CUSTOM=zebrafish
 ```
 
-When you switch between the two custom versions, all generated files must be cleaned from your system with the following command
+(c) If you need to switch modes, you must clean all previous compilation files beforehand by typing:
 
 ```shell
 make propper
