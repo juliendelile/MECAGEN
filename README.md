@@ -1,6 +1,6 @@
-## MECAGEN - A Simulation Platform of Animal Embryogenesis
+## MecaGen - A Simulation Platform of Animal Embryogenesis
 
-[MECAGEN](http://www.mecagen.org) is a C++ simulation platform for animal morphogenesis relying on a realistic agent-based model. It is centered on the physico-chemical coupling of cell mechanics with gene expression and molecular signaling.
+[MecaGen](http://www.mecagen.org) is a C++ simulation platform for animal morphogenesis relying on a realistic agent-based model. It is centered on the physico-chemical coupling of cell mechanics with gene expression and molecular signaling.
 
 This project aims to investigate the multiscale dynamics of the early stages of biological morphogenesis. Embryonic development is viewed as an emergent, self-organized phenomenon based on a myriad of cells and their genetically regulated, and regulating, biomechanical behavior.
 
@@ -10,7 +10,7 @@ This project aims to investigate the multiscale dynamics of the early stages of 
 
 ##### Dependencies
 
-Installing MECAGEN requires a few libraries to be installed first. All of these libraries can be installed manually via the hyperlinks. Yet, using a package manager simplifies this prerequisite step. We provide APT command lines operative on Ubuntu/Debian, alternative package manager have also been tested (e.g. pacman on Archlinux).
+Installing MecaGen requires a few libraries to be installed first. All of these libraries can be installed manually via the hyperlinks. Yet, using a package manager simplifies this prerequisite step. We provide APT command lines operative on Ubuntu/Debian, alternative package manager have also been tested (e.g. pacman on Archlinux).
 
 * SDL2.0 ([Simple DirectMedia Layer](https://www.libsdl.org/download-2.0.php), not to be mistaken with the previous version SDL1.2)
 ```shell
@@ -54,13 +54,13 @@ sudo apt-get install nvidia-cuda-toolkit
 
 * (Required only if no Cuda is installed) [Thrust](http://thrust.github.io/)
 
-Thrust is included with Cuda. Yet if you install MECAGEN without Cuda, the Thrust header library must be installed manually. Thrust is a C++ template library so the files just need to be copied on your system.
+Thrust is included with Cuda. Yet if you install MecaGen without Cuda, the Thrust header library must be installed manually. Thrust is a C++ template library so the files just need to be copied on your system.
 
 ##### Compilation
 
-First, edit the user paths file [(user_paths_MUST_BE_EDITED_FIRST)](user_paths_MUST_BE_EDITED_FIRST) by specifying your installation paths for QT, and Cuda or Thrust. If Cuda is installed on your system, we recommend that you compile MECAGEN with the VBO/Cuda version of the cells rendering by using the first option in the file.
+First, edit the user paths file [(user_paths_MUST_BE_EDITED_FIRST)](user_paths_MUST_BE_EDITED_FIRST) by specifying your installation paths for QT, and Cuda or Thrust. If Cuda is installed on your system, we recommend that you compile MecaGen with the VBO/Cuda version of the cells rendering by using the first option in the file.
 
-Then, decide which custom version of MECAGEN you want to use. Indeed, one of the specificities of the MECAGEN platform is the possibility to integrate external customization code to simulate specific structures and behaviors such as for example extra-embryonic tissue. Currently, two custom versions are available: the "default" custom version performs regular MECAGEN simulation without specific structure or behavior, and the "zebrafish" custom version adds rules for the yolk cell and the enveloping layer. 
+Then, decide which custom version of MecaGen you want to use. Indeed, one of the specificities of the MecaGen platform is the possibility to integrate external customization code to simulate specific structures and behaviors such as for example extra-embryonic tissue. Currently, two custom versions are available: the "default" custom version performs regular MecaGen simulation without specific structure or behavior, and the "zebrafish" custom version adds rules for the yolk cell and the enveloping layer. 
 
 It is not currently possible to compile both custom version at the same time so you have to choose whether you want to compile the default version with the [parent makefile](Makefile)
 
@@ -82,7 +82,7 @@ make propper
 
 #### Generate and run examples
 
-MECAGEN use xml files as inputs for the simulations. Three input files are required: 
+MecaGen use xml files as inputs for the simulations. Three input files are required: 
 - a *parameter* file containing all the parameters describing the gene regulatory network, the molecular interactions, and the biomechanical properties,
 - a *state* file containing the initial state of the variables,
 - a *meta-parameter* file containing information related to algorithmic or rendering options.
@@ -114,7 +114,7 @@ cd mecagen
 
 ##### Run examples
 
-Once input files are generated, MECAGEN simulations can be started by running the [run_examples.sh](mecagen/run_examples.sh) script. If the execution returns prematurely with "gpuassert", please start the script with sudo: "sudo run_examples.sh".
+Once input files are generated, MecaGen simulations can be started by running the [run_examples.sh](mecagen/run_examples.sh) script. If the execution returns prematurely with "gpuassert", please start the script with sudo: "sudo run_examples.sh".
 
 ##### Support videos
 
@@ -125,4 +125,4 @@ Two videos demonstrate the previous instructions and are accessible on youtube:
 
 ### License
 
-MECAGEN is released under the GNU General Public License v3.0; see LICENSE for more details.
+MecaGen is released under the GNU General Public License v3.0; see LICENSE for more details.
