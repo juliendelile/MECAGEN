@@ -22,7 +22,7 @@ These libraries can also be installed manually via the download links below:
 * <a href="http://sourceforge.net/projects/boost/files/boost/1.55.0/boost_1_55_0.tar.gz/download" target="_blank">Boost</a>
 * <a href="http://download.qt.io/official_releases/online_installers/qt-opensource-linux-x64-online.run" target="_blank">QT5.x</a>
 
-Then, if your machine is equipped with an NVIDIA graphics card, we recommend to install the CUDA library:
+Then, if your machine is equipped with an NVIDIA graphics card, we recommend to install the CUDA library, by command or download:
 
 ```shell
 sudo apt-get install nvidia-cuda-toolkit
@@ -30,7 +30,7 @@ sudo apt-get install nvidia-cuda-toolkit
 
 * <a href="https://developer.nvidia.com/cuda-toolkit-55-archive" target="_blank">CUDA 5.5 or newer</a>
 
-If you do not have an NVIDIA card, or are not sure, then you must download the Thrust template library (a package of header files) instead, and unzip it in the directory of your choice:
+If you do not have an NVIDIA card, or are not sure, then you must download instead the Thrust template library (a package of header files), and unzip it in the directory of your choice:
 
 * (Required only if no Cuda is installed) <a href="https://github.com/thrust/thrust/releases/download/1.8.1/thrust-1.8.1.zip" target="_blank">Thrust</a>
 
