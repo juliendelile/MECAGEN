@@ -11,9 +11,9 @@ QTLIBPATH=/usr/lib/x86_64-linux-gnu/qt5
 # Edit one of the following options *and* comment the other one. Depending on your choice, the MecaGen compilation will use CUDA rendering or not.
 
 # Option 1 (Recommended): 
-# Replace with your CUDA path here if you are using CUDA. It must be the directory that contains an "include" subfolder.
+# Replace here with your CUDA path if you are using CUDA. It must be the directory that contains an "include" subfolder.
 CUDAPATH=/usr/local/cuda
 
 # Option 2:
-# Replace with the path that contains the THRUST folder (not directly the THRUST path) if you are not using CUDA:
+# Replace here with the path that contains the THRUST folder (not directly the THRUST path) if you are not using CUDA:
 # THRUSTPATH=/data/Work/Applications/libraries

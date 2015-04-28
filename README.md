@@ -45,7 +45,7 @@ sudo apt-get install nvidia-cuda-toolkit
 
 * PATH contains the NVIDIA CUDA Compiler (nvcc)
 
-(c) Edit the user paths file [(user_paths_MUST_BE_EDITED_FIRST)](user_paths_MUST_BE_EDITED_FIRST) by specifying your installation paths for QT, and Cuda or Thrust. If Cuda is installed on your system, we recommend that you compile MecaGen with the VBO/Cuda version of the cells rendering by using the first option in the file.
+(c) Edit the custom file containing the user paths "user_paths_MUST_BE_EDITED_FIRST" on your disk as as indicated inside the file.
 
 #### 1.3. Compilation
 
