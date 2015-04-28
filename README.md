@@ -20,14 +20,7 @@ These libraries can also be installed manually via the websites below:
 * <a href="https://sourceforge.net/projects/glew/files/glew/1.12.0/glew-1.12.0.tgz/download" target="_blank">The OpenGL Extension Wrangler Library (GLEW)</a>
 * <a href="http://sourceforge.net/projects/freeglut/files/freeglut/3.0.0/freeglut-3.0.0.tar.gz" target="_blank">The OpenGL Utility Toolkit (GLUT)</a>
 * <a href="http://sourceforge.net/projects/boost/files/boost/1.55.0/boost_1_55_0.tar.gz/download" target="_blank">Boost</a>
-* <a href="" target="_blank"></a>
-* <a href="" target="_blank"></a>
-* <a href="" target="_blank"></a>
-* GLEW ([The OpenGL Extension Wrangler Library](http://glew.sourceforge.net/))
-* GLUT ([The OpenGL Utility Toolkit](https://www.opengl.org/resources/libraries/glut/))
-* [Boost Serialization](http://www.boost.org/doc/libs/1_57_0/libs/serialization/doc/index.html) 
-* [Boost Random Number Library](http://www.boost.org/doc/libs/1_57_0/doc/html/boost_random.html)
-* [QT5.x](http://qt-project.org/downloads)
+* <a href="http://download.qt.io/official_releases/online_installers/qt-opensource-linux-x64-online.run" target="_blank">QT5.x</a>
 
 Then, if your machine is equipped with an NVIDIA graphics card, we recommend to install the CUDA library:
 
