@@ -25,11 +25,8 @@ These libraries can also be installed manually via the websites below:
 * [Boost Random Number Library](http://www.boost.org/doc/libs/1_57_0/doc/html/boost_random.html)
 * [QT5.x](http://qt-project.org/downloads)
 
-The QT library folder must be in the LIBRARY_PATH environment variable and the folder containing the Meta-Object Compiler (moc) program in the PATH environment variable.
 
 * (Optional but recommended) [CUDA 5.5](https://developer.nvidia.com/cuda-toolkit-55-archive) or newer
-
-Cuda is required to enable an enhanced rendering of the simulations. It uses Vertex Buffer Object to interoperate with OpenGL. The folder containing the Nvidia Cuda Compiler (nvcc) must be the PATH environment variable.
 
 ```shell
 sudo apt-get install nvidia-cuda-toolkit
@@ -39,9 +36,15 @@ sudo apt-get install nvidia-cuda-toolkit
 
 Thrust is included with Cuda. Yet if you install MecaGen without Cuda, the Thrust header library must be installed manually. Thrust is a C++ template library so the files just need to be copied on your system.
 
-##### Compilation
+##### Environment variables
+
+The QT library folder must be in the LIBRARY_PATH environment variable and the folder containing the Meta-Object Compiler (moc) program in the PATH environment variable.
+
+Cuda is required to enable an enhanced rendering of the simulations. It uses Vertex Buffer Object to interoperate with OpenGL. The folder containing the Nvidia Cuda Compiler (nvcc) must be in the PATH environment variable.
 
 First, edit the user paths file [(user_paths_MUST_BE_EDITED_FIRST)](user_paths_MUST_BE_EDITED_FIRST) by specifying your installation paths for QT, and Cuda or Thrust. If Cuda is installed on your system, we recommend that you compile MecaGen with the VBO/Cuda version of the cells rendering by using the first option in the file.
+
+##### Compilation
 
 Then, decide which custom version of MecaGen you want to use. Indeed, one of the specificities of the MecaGen platform is the possibility to integrate external customization code to simulate specific structures and behaviors such as for example extra-embryonic tissue. Currently, two custom versions are available: the "default" custom version performs regular MecaGen simulation without specific structure or behavior, and the "zebrafish" custom version adds rules for the yolk cell and the enveloping layer. 
 
