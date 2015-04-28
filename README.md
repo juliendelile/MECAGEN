@@ -1,6 +1,6 @@
 ## MecaGen - A Simulation Platform of Animal Embryogenesis
 
-[MecaGen](http://www.mecagen.org) is a C++ simulation platform for animal morphogenesis relying on a realistic agent-based model. It is centered on the physico-chemical coupling of cell mechanics with gene expression and molecular signaling.
+[MecaGen](http://www.mecagen.org) is a C++ simulation platform of animal multicellular development relying on a realistic agent-based model. It is centered on the physico-chemical coupling of cell mechanics with gene expression and molecular signaling.
 
 This project aims to investigate the multiscale dynamics of the early stages of biological morphogenesis. Embryonic development is viewed as an emergent, self-organized phenomenon based on a myriad of cells and their genetically regulated, and regulating, biomechanical behavior.
 
@@ -10,36 +10,19 @@ This project aims to investigate the multiscale dynamics of the early stages of 
 
 ##### Dependencies
 
-Installing MecaGen requires a few libraries to be installed first. All of these libraries can be installed manually via the hyperlinks. Yet, using a package manager simplifies this prerequisite step. We provide APT command lines operative on Ubuntu/Debian, alternative package manager have also been tested (e.g. pacman on Archlinux).
+Installing MecaGen requires a few libraries to be installed first. All of these libraries can be installed manually via the hyperlinks. Yet, using a package manager simplifies this prerequisite step.
 
 * SDL2.0 ([Simple DirectMedia Layer](https://www.libsdl.org/download-2.0.php), not to be mistaken with the previous version SDL1.2)
-```shell
-sudo apt-get install libsdl2-dev
-```
- 
 * GLEW ([The OpenGL Extension Wrangler Library](http://glew.sourceforge.net/))
-```shell
-sudo apt-get install libglew-dev
-```
-
 * GLUT ([The OpenGL Utility Toolkit](https://www.opengl.org/resources/libraries/glut/))
-```shell
-sudo apt-get install freeglut3-dev
-```
-
 * [Boost Serialization](http://www.boost.org/doc/libs/1_57_0/libs/serialization/doc/index.html) 
-```shell
-sudo apt-get install libboost-serialization-dev
-```
-
 * [Boost Random Number Library](http://www.boost.org/doc/libs/1_57_0/doc/html/boost_random.html)
-```shell
-sudo apt-get install libboost-random-dev
-```
-
 * [QT5.x](http://qt-project.org/downloads)
+
+We provide APT command lines operative on Ubuntu/Debian, alternative package manager have also been tested (e.g. pacman on Archlinux).
+
 ```shell
-sudo apt-get install qt5-default
+sudo apt-get install libsdl2-dev libglew-dev freeglut3-dev libboost-serialization-dev libboost-random-dev qt5-default
 ```
 
 The QT library folder must be in the LIBRARY_PATH environment variable and the folder containing the Meta-Object Compiler (moc) program in the PATH environment variable.
