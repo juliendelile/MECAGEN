@@ -14,7 +14,7 @@ Installing MecaGen requires a few libraries to be installed first. We recommend 
 sudo apt-get install libsdl2-dev libglew-dev freeglut3-dev libboost-serialization-dev libboost-random-dev qt5-default
 ```
 
-These libraries can also be installed manually via the websites below:
+These libraries can also be installed manually via the download links below:
 
 * <a href="https://www.libsdl.org/release/SDL2-2.0.3.tar.gz" target="_blank">Simple DirectMedia Layer (SDL 2.0)</a>
 * <a href="https://sourceforge.net/projects/glew/files/glew/1.12.0/glew-1.12.0.tgz/download" target="_blank">The OpenGL Extension Wrangler Library (GLEW)</a>
