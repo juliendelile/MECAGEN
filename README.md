@@ -4,7 +4,7 @@
 
 This project aims to investigate the multiscale dynamics of the early stages of biological morphogenesis. Embryonic development is viewed as an emergent, self-organized phenomenon based on a myriad of cells and their genetically regulated, and regulating, biomechanical behavior.
 
-### 1. Installing on Linux
+### 1. Installing MecaGen on Linux
 
 #### 1.1. Dependencies
 
@@ -75,7 +75,7 @@ make CUSTOM=zebrafish
 make cleanall
 ```
 
-### 2. Running examples
+### 2. Running MecaGen
 
 MecaGen uses XML files as inputs for the simulations. It requires three input files, which can be automatically generated (see below):
 - a *parameter* file containing all the parameters describing the gene regulatory network (GRN), molecular interactions, and biomechanical properties
@@ -84,16 +84,26 @@ MecaGen uses XML files as inputs for the simulations. It requires three input fi
 
 #### 2.1. Generating input files
 
-For simulations containing a large number of cells, it is not practical to write the input files by hand. Instead, you can generate them automatically by typing the following commands:
+For simulations containing a large number of cells, it is not practical to write the input files by hand. Instead, you can generate them automatically by typing the following commands (must be done again after each new compilation):
 
 ```shell
 cd mecagen
 ./generate_input_files.sh all
 ```
 
-#### 2.2. Run examples
+#### 2.2. Running the examples
 
-Once input files are generated, MecaGen simulations can be started by running the [run_examples.sh](mecagen/run_examples.sh) script. If the execution returns prematurely with "gpuassert", please start the script with sudo: "sudo run_examples.sh".
+Once input files are generated, you can start MecaGen:
+
+```shell
+./run_examples.sh
+```
+
+Note: if execution halts prematurely with a "gpuassert" message, you need to start the script as superuser:
+
+```shell
+sudo ./run_examples.sh
+```
 
 #### 2.3. Support videos
 
