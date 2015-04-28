@@ -4,6 +4,11 @@
 
 This project aims to investigate the multiscale dynamics of the early stages of biological morphogenesis. Embryonic development is viewed as an emergent, self-organized phenomenon based on a myriad of cells and their genetically regulated, and regulating, biomechanical behavior.
 
+[1. Installing MecaGen on Linux][]
+2. Running MecaGen
+3. Help videos
+4. License
+
 ### 1. Installing MecaGen on Linux
 
 #### 1.1. Dependencies
@@ -114,4 +119,4 @@ Two videos accessible on YouTube demonstrate the previous instructions:
 
 ## 4. License
 
-MecaGen is released under the GNU General Public License v3.0; see LICENSE for more details.
+MecaGen is released under the GNU General Public License v3.0. See the LICENSE file for details.
