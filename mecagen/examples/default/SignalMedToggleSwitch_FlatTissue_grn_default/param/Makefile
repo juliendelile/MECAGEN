@@ -31,6 +31,6 @@ run: all
 clean: 
 	rm -f main.o
 
-propper: clean
+cleanall: clean
 	rm -f genParam
 	rm -f param_archive.xml

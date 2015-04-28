@@ -1,4 +1,4 @@
-.PHONY: all isf mecagen propper
+.PHONY: all isf mecagen cleanall
 
 all: isf mecagen
 
@@ -8,6 +8,6 @@ isf:
 mecagen:
 	$(MAKE) -C ./mecagen
 
-propper:
-	$(MAKE) propper -C ./isf
-	$(MAKE) propper -C ./mecagen
+cleanall:
+	$(MAKE) cleanall -C ./isf
+	$(MAKE) cleanall -C ./mecagen

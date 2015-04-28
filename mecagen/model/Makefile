@@ -26,7 +26,7 @@ HEADERS += $(CUSTOM_DEP_MODEL)
 ########################################################################################################################
 # Conditionnal compiler & rules
 ########################################################################################################################
-.PHONY: all clean propper
+.PHONY: all clean cleanall
 
 # CFLAGS extended with include flags from producers and from model
 CFLAGS += -I$(INC) -I$(MODELPATH)/includes
@@ -64,5 +64,5 @@ $(OUTPATH):
 clean:
 	rm -f $(SRC)/*.o
 
-propper: clean
+cleanall: clean
 	rm -rf ./lib

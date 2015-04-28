@@ -30,7 +30,7 @@ run: all
 clean:
 	rm -f main.o
 
-propper: clean
+cleanall: clean
 	rm -f genInputFiles
 	rm -f param_archive.xml
 	rm -f state_archive.xml

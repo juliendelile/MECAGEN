@@ -1,4 +1,4 @@
 clean:
 	rm -f src/*.o
 
-propper: clean
+cleanall: clean

@@ -31,7 +31,7 @@ run: all
 clean:
 	rm -f main.o
 
-propper: clean
+cleanall: clean
 	rm -f genState
 	rm -f state_archive.xml
 	rm -f metaparam_archive.xml

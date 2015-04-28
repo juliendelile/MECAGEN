@@ -35,7 +35,7 @@ HEADERS = $(wildcard $(INC)/*.hpp)
 OBJECTS = $(patsubst %.cpp, %.o, $(wildcard $(SRC)/*.cpp))
 ########################################################################################################################
 
-.PHONY: all clean propper
+.PHONY: all clean cleanall
 .PRECIOUS: $(SOTARGET) $(ARTARGET) $(OBJECTS)
 
 #all: $(SOTARGET) $(ARTARGET)
@@ -56,6 +56,6 @@ $(ARTARGET): $(OBJECTS)
 clean:
 	rm -f $(OBJECTS)
 
-propper: clean
+cleanall: clean
 	rm -f $(ARTARGET)
 #	rm -f $(ARTARGET) $(SOTARGET)

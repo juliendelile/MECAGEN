@@ -87,7 +87,7 @@ endif
 ########################################################################################################################
 # Rules:
 ########################################################################################################################
-.PHONY: all clean propper
+.PHONY: all clean cleanall
 
 ### The final step is just linking everything together with the libs
 all: $(OBJECTS)
@@ -120,6 +120,6 @@ clean:
 	rm -f moc_*.cpp
 	$(MAKE) clean -C ./cuda
 
-propper: clean
+cleanall: clean
 	rm ./bin/mecagenGUI
-	$(MAKE) propper -C ./cuda
+	$(MAKE) cleanall -C ./cuda

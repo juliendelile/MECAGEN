@@ -139,7 +139,7 @@ LIB    += $(CUSTOMPATH_MODEL)/libcustom.a
 # Rules:
 ########################################################################################################################
 # Phony rules do not depend on files or directories (i.e. do not look in the filesystem for dependencies)
-.PHONY: cuda omp cpp build gui explo clean propper
+.PHONY: cuda omp cpp build gui explo clean cleanall
 
 # By default, build everything in cpp mode
 all: cpp
@@ -239,7 +239,7 @@ gui/Makefile: components compiler_flags_vbo
 ########################################################################################################################
 # Cleaning:
 ########################################################################################################################
-# "clean" removes "*.o" files and "propper" removes everything that is generated
+# "clean" removes "*.o" files and "cleanall" removes everything that is generated
 
 # Just execute the "clean" target of submakes and remove the compiler_flags file
 # The dash "-" in front of command tells make to ignore errors (e.g. continue even if a rm command failed)
@@ -254,21 +254,21 @@ clean:
 	- for i in $(CUSTOM_DIRS); do $(MAKE) clean -C $$i/model; done
 	- for i in $(CUSTOM_DIRS); do $(MAKE) clean -C $$i/gui; done
 
-# Same thing for propper
-propper: clean
-	- $(MAKE) propper   -C ./gui        # Qt distclean command
-	# - $(MAKE) propper   -C ./explo
-	- $(MAKE) propper   -C $(MODELPATH)
-	- $(MAKE) propper   -C $(PRODUCERSPATH)
-	- $(MAKE) propper   -C $(CONSUMERSPATH)
-	- for i in $(CUSTOM_DIRS); do $(MAKE) propper -C $$i/model; done
-	- for i in $(CUSTOM_DIRS); do $(MAKE) propper -C $$i/gui; done
-	- $(MAKE) propper -C ./examples/default/Boundaryformation_epithelialization/param
-	- $(MAKE) propper -C ./examples/default/Boundaryformation_epithelialization/state
-	- $(MAKE) propper -C ./examples/default/BoxTissueFrom1cell_grn_default/state
-	- $(MAKE) propper -C ./examples/default/BoxTissueFrom1cell_grn_default/param
-	- $(MAKE) propper -C ./examples/default/SignalMedToggleSwitch_FlatTissue_grn_default/state
-	- $(MAKE) propper -C ./examples/default/SignalMedToggleSwitch_FlatTissue_grn_default/param
-	- $(MAKE) propper -C ./examples/default/FlatTissueFrom1cell_grn_default/param
-	- $(MAKE) propper -C ./examples/default/FlatTissueFrom1cell_grn_default/state
-	- $(MAKE) propper -C ./examples/zebrafish/Zebrafish_epiboly
+# Same thing for cleanall
+cleanall: clean
+	- $(MAKE) cleanall   -C ./gui        # Qt distclean command
+	# - $(MAKE) cleanall   -C ./explo
+	- $(MAKE) cleanall   -C $(MODELPATH)
+	- $(MAKE) cleanall   -C $(PRODUCERSPATH)
+	- $(MAKE) cleanall   -C $(CONSUMERSPATH)
+	- for i in $(CUSTOM_DIRS); do $(MAKE) cleanall -C $$i/model; done
+	- for i in $(CUSTOM_DIRS); do $(MAKE) cleanall -C $$i/gui; done
+	- $(MAKE) cleanall -C ./examples/default/Boundaryformation_epithelialization/param
+	- $(MAKE) cleanall -C ./examples/default/Boundaryformation_epithelialization/state
+	- $(MAKE) cleanall -C ./examples/default/BoxTissueFrom1cell_grn_default/state
+	- $(MAKE) cleanall -C ./examples/default/BoxTissueFrom1cell_grn_default/param
+	- $(MAKE) cleanall -C ./examples/default/SignalMedToggleSwitch_FlatTissue_grn_default/state
+	- $(MAKE) cleanall -C ./examples/default/SignalMedToggleSwitch_FlatTissue_grn_default/param
+	- $(MAKE) cleanall -C ./examples/default/FlatTissueFrom1cell_grn_default/param
+	- $(MAKE) cleanall -C ./examples/default/FlatTissueFrom1cell_grn_default/state
+	- $(MAKE) cleanall -C ./examples/zebrafish/Zebrafish_epiboly

@@ -66,7 +66,7 @@ make CUSTOM=zebrafish
 (c) If you need to switch modes, you must clean all previous compilation files beforehand by typing:
 
 ```shell
-make propper
+make cleanall
 ```
 
 ### 2. Generate and run examples

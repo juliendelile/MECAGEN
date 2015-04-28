@@ -6,5 +6,5 @@ vbo.o:vbo.cu vbo.h kernel.cu kernel.cuh
 clean:
 	rm -f vbo.o
 
-propper:
+cleanall:
 	clean
