@@ -36,6 +36,17 @@ sudo apt-get install nvidia-cuda-toolkit
 
 #### 1.2. Environment variables
 
+(a) If you installed the above QT5.x library by download, verify that the following environment variables contain the proper library folders:
+
+* LIBRARY_PATH must contain the QT library folder <span style="color:orange;">(Matthieu doit confirmer !)</span>
+* PATH must contain the Meta-Object Compiler (moc) program
+
+(b) If you installed CUDA by download, verify that:
+
+* PATH contains the NVIDIA CUDA Compiler (nvcc)
+
+
+
 The QT library folder must be in the LIBRARY_PATH environment variable and the folder containing the Meta-Object Compiler (moc) program in the PATH environment variable.
 
 Cuda is required to enable an enhanced rendering of the simulations. It uses Vertex Buffer Object to interoperate with OpenGL. The folder containing the Nvidia Cuda Compiler (nvcc) must be in the PATH environment variable.
