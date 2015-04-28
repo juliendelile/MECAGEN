@@ -6,8 +6,8 @@ This project aims to investigate the multiscale dynamics of the early stages of 
 
 * [1. Installing MecaGen on Linux](#1-installing-mecagen-on-linux)
 * [2. Running MecaGen](#2-running-mecagen)
-* [3. Help videos](3-help-videos)
-* [4. License](4-license)
+* [3. Help videos](#3-help-videos)
+* [4. License](#4-license)
 
 ### 1. Installing MecaGen on Linux
 
