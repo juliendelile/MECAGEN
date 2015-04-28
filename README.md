@@ -105,13 +105,13 @@ Note: if execution halts prematurely with a "gpuassert" message, you need to sta
 sudo ./run_examples.sh
 ```
 
-#### 2.3. Support videos
+## 3. Help videos
 
-Two videos demonstrate the previous instructions and are accessible on youtube:
+Two videos accessible on YouTube demonstrate the previous instructions:
 
-* the [first video](https://www.youtube.com/watch?v=d79v7MDPIBw) details the procedure required to compile and run the "zebrafish" mode simulation with Cuda/VBO rendering.
-* the [second video](https://www.youtube.com/watch?v=5zcLAL-caDQ) details the procedure required to compile and run the "default" mode simulations without the Cuda/VBO rendering. 
+* <a href="https://www.youtube.com/watch?v=d79v7MDPIBw" target="_blank">Install with CUDA, compile and run the "zebrafish" mode</a>
+* <a href="https://www.youtube.com/watch?v=5zcLAL-caDQ" target="_blank">Install without CUDA, compile and run the "default" mode</a>
 
-## 3. License
+## 4. License
 
 MecaGen is released under the GNU General Public License v3.0; see LICENSE for more details.
