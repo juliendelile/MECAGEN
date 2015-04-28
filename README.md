@@ -11,22 +11,28 @@ This project aims to investigate the multiscale dynamics of the early stages of 
 Installing MecaGen requires a few libraries to be installed first. We recommend using a package manager such as "pacman" on Archlinux, or the "Advanced Packaging Tool" (APT) on Ubuntu and Debian. For the last two, you can copy and paste the following command in a terminal window:
 
 ```shell
-sudo apt-get install libsdl2-dev libglew-dev freeglut3-dev libboost-serialization-dev libboost-random-dev qt5-default
+sudo apt-get install libsdl2-dev libglew-dev freeglut3-dev libboost-serialization-dev 
+libboost-random-dev qt5-default
 ```
 
 These libraries can also be installed manually via the websites below:
 
-* SDL2.0 ([Simple DirectMedia Layer](https://www.libsdl.org/download-2.0.php), not to be mistaken with the previous version SDL1.2)
+* <a href="https://www.libsdl.org/release/SDL2-2.0.3.tar.gz" target="_blank">Simple DirectMedia Layer (SDL 2.0)</a>
 * GLEW ([The OpenGL Extension Wrangler Library](http://glew.sourceforge.net/))
 * GLUT ([The OpenGL Utility Toolkit](https://www.opengl.org/resources/libraries/glut/))
 * [Boost Serialization](http://www.boost.org/doc/libs/1_57_0/libs/serialization/doc/index.html) 
 * [Boost Random Number Library](http://www.boost.org/doc/libs/1_57_0/doc/html/boost_random.html)
 * [QT5.x](http://qt-project.org/downloads)
-* (Optional but recommended) [CUDA 5.5](https://developer.nvidia.com/cuda-toolkit-55-archive) or newer
+
+Then, if your machine is equipped with an NVIDIA graphics card, we recommend to install the CUDA library:
 
 ```shell
 sudo apt-get install nvidia-cuda-toolkit
 ```
+
+* [CUDA 5.5](https://developer.nvidia.com/cuda-toolkit-55-archive) or newer
+
+
 
 * (Required only if no Cuda is installed) [Thrust](http://thrust.github.io/)
 
