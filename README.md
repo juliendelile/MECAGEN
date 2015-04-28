@@ -6,11 +6,11 @@ This project aims to investigate the multiscale dynamics of the early stages of 
 
 ### Getting Started
 
-#### Install on Linux
+#### Installing on Linux
 
 ##### Dependencies
 
-Installing MecaGen requires a few libraries to be installed first. For this, we recommend using a package manager such as "pacman" on Archlinux, or the "Advanced Packaging Tool" (APT) on Ubuntu and Debian. For the latter, you can copy and paste the following command in a terminal window:
+Installing MecaGen requires a few libraries to be installed first. We recommend using a package manager such as "pacman" on Archlinux, or the "Advanced Packaging Tool" (APT) on Ubuntu and Debian. For the last two, you can copy and paste the following command in a terminal window:
 
 ```shell
 sudo apt-get install libsdl2-dev libglew-dev freeglut3-dev libboost-serialization-dev libboost-random-dev qt5-default
