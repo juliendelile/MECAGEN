@@ -38,20 +38,14 @@ sudo apt-get install nvidia-cuda-toolkit
 
 (a) If you installed the above QT5.x library by download, verify that the following environment variables contain the proper library folders:
 
-* LIBRARY_PATH must contain the QT library folder **(MATTHIEU : A CONFIRMER)**    <b><i>(MATTHIEU : A CONFIRMER)</i></b>
+* LIBRARY_PATH must contain the QT library folder <b><i>(MATTHIEU : A CONFIRMER)</i></b>
 * PATH must contain the Meta-Object Compiler (moc) program
 
 (b) If you installed CUDA by download, verify that:
 
 * PATH contains the NVIDIA CUDA Compiler (nvcc)
 
-
-
-The QT library folder must be in the LIBRARY_PATH environment variable and the folder containing the Meta-Object Compiler (moc) program in the PATH environment variable.
-
-Cuda is required to enable an enhanced rendering of the simulations. It uses Vertex Buffer Object to interoperate with OpenGL. The folder containing the Nvidia Cuda Compiler (nvcc) must be in the PATH environment variable.
-
-First, edit the user paths file [(user_paths_MUST_BE_EDITED_FIRST)](user_paths_MUST_BE_EDITED_FIRST) by specifying your installation paths for QT, and Cuda or Thrust. If Cuda is installed on your system, we recommend that you compile MecaGen with the VBO/Cuda version of the cells rendering by using the first option in the file.
+(c) Edit the user paths file [(user_paths_MUST_BE_EDITED_FIRST)](user_paths_MUST_BE_EDITED_FIRST) by specifying your installation paths for QT, and Cuda or Thrust. If Cuda is installed on your system, we recommend that you compile MecaGen with the VBO/Cuda version of the cells rendering by using the first option in the file.
 
 #### 1.3. Compilation
 

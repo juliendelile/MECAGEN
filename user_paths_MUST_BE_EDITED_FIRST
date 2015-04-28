@@ -1,19 +1,19 @@
 # QT paths
 ##########
 
-# Edit the following two lines with your system directories
+# Replace the values of the following two variables with the paths occupied by qt5 on your system:
 QTINCLUDEPATH=/usr/include/qt5
 QTLIBPATH=/usr/lib/x86_64-linux-gnu/qt5
 
-# Cuda/Thrust
-#############
+# CUDA OR THRUST
+################
 
-# Edit one of the following options, *AND* comment the other. According to this choice, the MecaGen compilation will use the Cuda/VBO rendering or not. 
+# Edit one of the following options *and* comment the other one. Depending on your choice, the MecaGen compilation will use CUDA rendering or not.
 
 # Option 1 (Recommended): 
-# Write your cuda path here if you plan to use the Cuda/VBO rendering. It must contain an "include" folder.
+# Replace with your CUDA path here if you are using CUDA. It must be the directory that contains an "include" subfolder.
 CUDAPATH=/usr/local/cuda
 
 # Option 2:
-# Write below the path which contains the thurst folder (not the thurst folder itself !) if you do not plan to use the Cuda/VBO rendering.
+# Replace with the path that contains the THRUST folder (not directly the THRUST path) if you are not using CUDA:
 # THRUSTPATH=/data/Work/Applications/libraries
