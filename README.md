@@ -24,8 +24,6 @@ These libraries can also be installed manually via the websites below:
 * [Boost Serialization](http://www.boost.org/doc/libs/1_57_0/libs/serialization/doc/index.html) 
 * [Boost Random Number Library](http://www.boost.org/doc/libs/1_57_0/doc/html/boost_random.html)
 * [QT5.x](http://qt-project.org/downloads)
-
-
 * (Optional but recommended) [CUDA 5.5](https://developer.nvidia.com/cuda-toolkit-55-archive) or newer
 
 ```shell
