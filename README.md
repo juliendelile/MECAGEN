@@ -4,10 +4,10 @@
 
 This project aims to investigate the multiscale dynamics of the early stages of biological morphogenesis. Embryonic development is viewed as an emergent, self-organized phenomenon based on a myriad of cells and their genetically regulated, and regulating, biomechanical behavior.
 
-| [1. Installing MecaGen on Linux](#1-installing-mecagen-on-linux)
-| [2. Running MecaGen](#2-running-mecagen)
-| [3. Help videos](#3-help-videos)
-| [4. License](#4-license)
+| [1. Installing MecaGen on Linux](#1-installing-mecagen-on-linux)  
+| [2. Running MecaGen](#2-running-mecagen)  
+| [3. Help videos](#3-help-videos)  
+| [4. License](#4-license)  
 
 ### 1. Installing MecaGen on Linux
 
