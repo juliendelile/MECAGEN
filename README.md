@@ -30,9 +30,9 @@ sudo apt-get install nvidia-cuda-toolkit
 
 * <a href="https://developer.nvidia.com/cuda-toolkit-55-archive" target="_blank">CUDA 5.5 or newer</a>
 
-* (Required only if no Cuda is installed) [Thrust](http://thrust.github.io/)
+If you do not have an NVIDIA card, or are not sure, then you must download the Thrust template library (a package of header files) instead, and unzip it in the directory of your choice:
 
-Thrust is included with Cuda. Yet if you install MecaGen without Cuda, the Thrust header library must be installed manually. Thrust is a C++ template library so the files just need to be copied on your system.
+* (Required only if no Cuda is installed) <a href="https://github.com/thrust/thrust/releases/download/1.8.1/thrust-1.8.1.zip" target="_blank">Thrust</a>
 
 #### 1.2. Environment variables
 
