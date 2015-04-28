@@ -10,7 +10,13 @@ This project aims to investigate the multiscale dynamics of the early stages of 
 
 ##### Dependencies
 
-Installing MecaGen requires a few libraries to be installed first. All of these libraries can be installed manually via the hyperlinks. Yet, using a package manager simplifies this prerequisite step.
+Installing MecaGen requires a few libraries to be installed first. For this, we recommend using a package manager such as "pacman" on Archlinux, or the "Advanced Packaging Tool" (APT) on Ubuntu and Debian. For the latter, you can copy and paste the following command in a terminal window:
+
+```shell
+sudo apt-get install libsdl2-dev libglew-dev freeglut3-dev libboost-serialization-dev libboost-random-dev qt5-default
+```
+
+These libraries can also be installed manually via the websites below:
 
 * SDL2.0 ([Simple DirectMedia Layer](https://www.libsdl.org/download-2.0.php), not to be mistaken with the previous version SDL1.2)
 * GLEW ([The OpenGL Extension Wrangler Library](http://glew.sourceforge.net/))
@@ -18,12 +24,6 @@ Installing MecaGen requires a few libraries to be installed first. All of these 
 * [Boost Serialization](http://www.boost.org/doc/libs/1_57_0/libs/serialization/doc/index.html) 
 * [Boost Random Number Library](http://www.boost.org/doc/libs/1_57_0/doc/html/boost_random.html)
 * [QT5.x](http://qt-project.org/downloads)
-
-We provide APT command lines operative on Ubuntu/Debian, alternative package manager have also been tested (e.g. pacman on Archlinux).
-
-```shell
-sudo apt-get install libsdl2-dev libglew-dev freeglut3-dev libboost-serialization-dev libboost-random-dev qt5-default
-```
 
 The QT library folder must be in the LIBRARY_PATH environment variable and the folder containing the Meta-Object Compiler (moc) program in the PATH environment variable.
 
