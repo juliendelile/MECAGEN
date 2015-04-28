@@ -28,9 +28,7 @@ Then, if your machine is equipped with an NVIDIA graphics card, we recommend to 
 sudo apt-get install nvidia-cuda-toolkit
 ```
 
-* [CUDA 5.5](https://developer.nvidia.com/cuda-toolkit-55-archive) or newer
-
-
+* <a href="https://developer.nvidia.com/cuda-toolkit-55-archive" target="_blank">CUDA 5.5 or newer</a>
 
 * (Required only if no Cuda is installed) [Thrust](http://thrust.github.io/)
 
