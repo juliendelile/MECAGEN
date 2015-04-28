@@ -63,7 +63,7 @@ make CUSTOM=default
 make CUSTOM=zebrafish
 ```
 
-(c) If you need to switch modes, you must clean all previous compilation files beforehand by typing:
+(c) If you need to switch modes to run another case study, you must clean all previous compilation files beforehand by typing:
 
 ```shell
 make cleanall
