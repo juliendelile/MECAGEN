@@ -79,7 +79,7 @@ The path we want is: CUDAPATH=/opt/cuda
 
 Otherwise, for THRUSTPATH: specify the path to the folder *containing* the Thrust library (i.e. where you downloaded the header files). Make sure the final 'thrust' segment is *not* included in the path.
 
-(b) If you installed the above QT5.x library by download, verify that the following environment variables of your system contain the proper library folders:
+(b) If you installed the above QT5.x library by download, verify that the following environment variables of your system contain the proper library folders (for example with the 'export' command):
 
 * PATH must contain the Meta-Object Compiler (moc) program
 
