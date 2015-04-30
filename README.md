@@ -43,7 +43,6 @@ sudo apt-get install nvidia-cuda-toolkit
 
 (a) If you installed the above QT5.x library by download, verify that the following environment variables of your system contain the proper library folders:
 
-* LIBRARY_PATH must contain the QT library folder <b><i>(MATTHIEU : A CONFIRMER)</i></b>
 * PATH must contain the Meta-Object Compiler (moc) program
 
 (b) If you installed CUDA by download, verify that:
