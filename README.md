@@ -41,15 +41,51 @@ sudo apt-get install nvidia-cuda-toolkit
 
 #### 1.2. Environment variables
 
-(a) If you installed the above QT5.x library by download, verify that the following environment variables of your system contain the proper library folders:
+(a) Edit the local file on your disk "user_paths_MUST_BE_EDITED_FIRST", which contains the paths for Qt and CUDA, as as indicated inside the file (do not rename it).  For that, you can use the 'locate' command to identify the correct paths (if that command is not installed, its package is usually named 'mlocate', so in Ubuntu you can type 'sudo apt-get install mlocate').
+
+Example for QTINCLUDEPATH:
+
+```shell
+locate qapplication.h
+... /usr/include/qt/QtWidgets/qapplication.h
+... /usr/include/qt4/Qt/qapplication.h
+... /usr/include/qt4/QtGui/qapplication.h
+... /usr/include/qt4-32/Qt/qapplication.h
+```
+
+Our system has both QT4 and QT5 installed, QT5 being the default one, thus we look at the 1st line and the path we want is: QTINCLUDEPATH=/usr/include/qt
+ 
+Example for QTLIBPATH:
+
+ ```shell
+ locate bin/qmake
+... /usr/bin/qmake
+... /usr/bin/qmake-qt4
+... /usr/bin/qmake-qt5
+... /usr/lib/qt/bin/qmake
+... /usr/lib/qt4/bin/qmake
+```
+
+Here, we want the library path, therefore the 4th line: QTLIBPATH=/usr/lib/qt
+ 
+Example for CUDAPATH (if installed):
+
+```shell
+locate cuda_runtime.h
+... /opt/cuda/include/cuda_runtime.h
+```
+
+The path we want is: CUDAPATH=/opt/cuda
+
+Otherwise, for THRUSTPATH: specify the path to the folder *containing* the Thrust library (i.e. where you downloaded the header files). Make sure the final 'thrust' segment is *not* included in the path.
+
+(b) If you installed the above QT5.x library by download, verify that the following environment variables of your system contain the proper library folders:
 
 * PATH must contain the Meta-Object Compiler (moc) program
 
-(b) If you installed CUDA by download, verify that:
+(c) If you installed CUDA by download, verify that:
 
 * PATH contains the NVIDIA CUDA Compiler (nvcc)
-
-(c) Edit the custom file containing the user paths "user_paths_MUST_BE_EDITED_FIRST" on your disk as as indicated inside the file.
 
 #### 1.3. Compilation
 
