@@ -46,11 +46,11 @@ sudo apt-get install nvidia-cuda-toolkit
 Example for QTINCLUDEPATH:
 
 ```shell
-locate qapplication.h
-... /usr/include/qt/QtWidgets/qapplication.h
-... /usr/include/qt4/Qt/qapplication.h
-... /usr/include/qt4/QtGui/qapplication.h
-... /usr/include/qt4-32/Qt/qapplication.h
+$ locate qapplication.h
+/usr/include/qt/QtWidgets/qapplication.h
+/usr/include/qt4/Qt/qapplication.h
+/usr/include/qt4/QtGui/qapplication.h
+/usr/include/qt4-32/Qt/qapplication.h
 ```
 
 Our system has both QT4 and QT5 installed, QT5 being the default one, thus we look at the 1st line and the path we want is: QTINCLUDEPATH=/usr/include/qt
@@ -58,12 +58,12 @@ Our system has both QT4 and QT5 installed, QT5 being the default one, thus we lo
 Example for QTLIBPATH:
 
  ```shell
- locate bin/qmake
-... /usr/bin/qmake
-... /usr/bin/qmake-qt4
-... /usr/bin/qmake-qt5
-... /usr/lib/qt/bin/qmake
-... /usr/lib/qt4/bin/qmake
+$ locate bin/qmake
+/usr/bin/qmake
+/usr/bin/qmake-qt4
+/usr/bin/qmake-qt5
+/usr/lib/qt/bin/qmake
+/usr/lib/qt4/bin/qmake
 ```
 
 Here, we want the library path, therefore the 4th line: QTLIBPATH=/usr/lib/qt
@@ -71,8 +71,8 @@ Here, we want the library path, therefore the 4th line: QTLIBPATH=/usr/lib/qt
 Example for CUDAPATH (if installed):
 
 ```shell
-locate cuda_runtime.h
-... /opt/cuda/include/cuda_runtime.h
+$ locate cuda_runtime.h
+/opt/cuda/include/cuda_runtime.h
 ```
 
 The path we want is: CUDAPATH=/opt/cuda
