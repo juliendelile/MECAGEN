@@ -2,18 +2,33 @@
 
 [MecaGen](http://www.mecagen.org) is a C++ simulation platform of animal multicellular development relying on a realistic agent-based model. It is centered on the physico-chemical coupling of cell mechanics with gene expression and molecular signaling.
 
+<p align="center"><img src="images/schematic.png" width="60%"></p>
+
 This project aims to investigate the multiscale dynamics of the early stages of biological morphogenesis. Embryonic development is viewed as an emergent, self-organized phenomenon based on a myriad of cells and their genetically regulated, and regulating, biomechanical behavior.
 
-1. [Installing MecaGen on Linux](#1-installing-mecagen-on-linux)  
-2. [Running MecaGen](#2-running-mecagen)  
-3. [Help videos](#3-help-videos)  
-4. [License](#4-license)  
+Past runs simulate:
 
-### 1. Installing MecaGen on Linux
+* collective cell behaviours during the zebrafish epiboly,
 
-#### 1.1. Dependencies
+<p align="center"><img src="images/zebrafish.gif" width="60%"></p>
 
-(a) Installing MecaGen requires a few libraries to be installed first. We recommend using a package manager such as "pacman" on Archlinux, or the "Advanced Packaging Tool" (APT) on Ubuntu and Debian. For the last two, you can copy and paste the following command in a terminal window:
+* boundary formation and epithelialization
+
+<p align="center"><img src="images/boundary.gif" width="60%"></p>
+
+* or pattern formation from an external signalling gradient.
+
+<p align="center"><img src="images/pattern.gif" width="60%"></p>
+
+More information can be found in the open access article describing the model:
+
+*Delile, J., Herrmann, M., Peyriéras, N. and Doursat, R. (2017). A cell-based computational model of early embryogenesis coupling mechanical behaviour and gene regulation. Nat Commun 8, 13929. https://doi.org/10.1038/ncomms13929*
+
+### Installing MecaGen on Linux
+
+#### Dependencies
+
+(a) Installing **MecaGen** requires a few libraries to be installed first. We recommend using a package manager such as "pacman" on Archlinux, or the "Advanced Packaging Tool" (APT) on Ubuntu and Debian. For the last two, you can copy and paste the following command in a terminal window:
 
 ```shell
 sudo apt-get install libsdl2-dev libglew-dev freeglut3-dev libboost-serialization-dev libboost-random-dev qt5-default
@@ -39,7 +54,7 @@ sudo apt-get install nvidia-cuda-toolkit
 
 * (Required only if no Cuda is installed) <a href="https://github.com/thrust/thrust/releases/download/1.8.1/thrust-1.8.1.zip" target="_blank">Thrust</a>
 
-#### 1.2. Environment variables
+#### Environment variables
 
 (a) Edit the local file on your disk "user_paths_MUST_BE_EDITED_FIRST", which contains the paths for Qt and CUDA, as as indicated inside the file (do not rename it).  For that, you can use the 'locate' command to identify the correct paths (if that command is not installed, its package is usually named 'mlocate', so in Ubuntu you can type 'sudo apt-get install mlocate').
 
@@ -87,7 +102,7 @@ Otherwise, for THRUSTPATH: specify the path to the folder *containing* the Thrus
 
 * PATH contains the NVIDIA CUDA Compiler (nvcc)
 
-#### 1.3. Compilation
+#### Compilation
 
 At this stage, compilation options will depend on the examples you want to run. This is because the MecaGen platform was designed to allow integration with external custom code, in order to simulate specific structures such as extraembryonic tissue. Currently, two versions are available: (a) a "default" version executing regular MecaGen simulations without custom code, and (b) a "zebrafish" version that includes special rules for the yolk particles and enveloping layer (EVL) cells.
 
@@ -115,14 +130,14 @@ make CUSTOM=zebrafish
 make cleanall
 ```
 
-### 2. Running MecaGen
+### Running MecaGen
 
 MecaGen uses XML files as inputs for the simulations. It requires three input files, which can be automatically generated (see below):
 - a *parameter* file containing all the parameters describing the gene regulatory network (GRN), molecular interactions, and biomechanical properties
 - a *state* file containing the initial state of the variables
 - a *meta-parameter* file containing information related to algorithmic and rendering options
 
-#### 2.1. Generating input files
+#### Generating input files
 
 For simulations containing a large number of cells, it is not practical to write the input files by hand. Instead, you can generate them automatically by typing the following commands (must be done again after each new compilation):
 
@@ -131,7 +146,7 @@ cd mecagen
 ./generate_input_files.sh all
 ```
 
-#### 2.2. Running the examples
+#### Running the examples
 
 Once input files are generated, you can start MecaGen:
 
@@ -145,13 +160,13 @@ Note: if execution halts prematurely with a "gpuassert" message, you need to sta
 sudo ./run_examples.sh
 ```
 
-## 3. Help videos
+## Help videos
 
 Two videos accessible on YouTube demonstrate the previous instructions:
 
 * <a href="https://www.youtube.com/watch?v=d79v7MDPIBw" target="_blank">Install with CUDA, compile and run the "zebrafish" mode</a>
 * <a href="https://www.youtube.com/watch?v=5zcLAL-caDQ" target="_blank">Install without CUDA, compile and run the "default" mode</a>
 
-## 4. License
+## License
 
 MecaGen is released under the GNU General Public License v3.0. See the LICENSE file for details.
