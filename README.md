@@ -2,23 +2,23 @@
 
 [MecaGen](http://www.mecagen.org) is a C++ simulation platform of animal multicellular development relying on a realistic agent-based model. It is centered on the physico-chemical coupling of cell mechanics with gene expression and molecular signaling.
 
-<p align="center"><img src="images/schematic.png" width="60%"></p>
+<p align="center"><img src="images/schematic.png" width="75%"></p>
 
 This project aims to investigate the multiscale dynamics of the early stages of biological morphogenesis. Embryonic development is viewed as an emergent, self-organized phenomenon based on a myriad of cells and their genetically regulated, and regulating, biomechanical behavior.
 
 Past runs simulate:
 
-* collective cell behaviours during the zebrafish epiboly,
+* the collective cell behaviours during the zebrafish epiboly,
 
-<p align="center"><img src="images/zebrafish.gif" width="60%"></p>
+<p align="center"><img src="images/zebrafish.gif" width="75%"></p>
 
 * boundary formation and epithelialization
 
-<p align="center"><img src="images/boundary.gif" width="60%"></p>
+<p align="center"><img src="images/boundary.gif" width="75%"></p>
 
 * or pattern formation from an external signalling gradient.
 
-<p align="center"><img src="images/pattern.gif" width="60%"></p>
+<p align="center"><img src="images/pattern.gif" width="75%"></p>
 
 More information can be found in the open access article describing the model:
 
