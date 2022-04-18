@@ -16,5 +16,4 @@ QTLIBPATH=/usr/lib/qt5
 
 # Option 2:
 # Replace here with the path that contains the THRUST folder (not directly the THRUST path) if you are not using CUDA:
-# THRUSTPATH=/home/julien/Downloads/thrust-1.7.0
 THRUSTPATH=/home/thrust-1.7.0
