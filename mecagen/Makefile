@@ -53,7 +53,7 @@ CFLAGS += -I$(CONSUMERSPATH)/includes
 
 # Linking flags:
 export LIB
-export LIBCUDA += -L$(CUDAPATH)/lib64
+export LIBCUDA += -L$(CUDAPATH)/lib
 
 ########################################################################################################################
 # Cuda Compiler:
@@ -61,7 +61,8 @@ export LIBCUDA += -L$(CUDAPATH)/lib64
 # WARNING: add -DBOOST_NOINLINE='__attribute__ ((noinline))' so the compilation succeed while using boost serialiation
 # export CUDACC    ?= nvcc -gencode=arch=compute_11,code=\"sm_11,compute_11\" -DBOOST_NOINLINE='__attribute__ ((noinline))'
 # export CUDACC    ?= nvcc -gencode=arch=compute_20,code=\"sm_20,compute_20\" -DBOOST_NOINLINE='__attribute__ ((noinline))'
-export CUDACC    ?= nvcc -gencode=arch=compute_30,code=\"sm_30,compute_30\" -DBOOST_NOINLINE='__attribute__ ((noinline))'
+# export CUDACC    ?= nvcc -gencode=arch=compute_30,code=\"sm_30,compute_30\" -DBOOST_NOINLINE='__attribute__ ((noinline))'
+export CUDACC    ?= nvcc -gencode=arch=compute_50,code=\"sm_50,compute_50\" -DBOOST_NOINLINE='__attribute__ ((noinline))'
 
 ########################################################################################################################
 # Project third-party configuration:
@@ -154,7 +155,7 @@ cuda: THRUSTD       = $(THRUSTSYSTEMCUDA)
 # We specify the compiler, its flags and the needed libraries:
 cuda: DEVICE_CC     = $(CUDACC)
 cuda: DEVICE_FLAGS  = --compiler-options '-fpic' -I$(CUDAPATH)/include
-cuda: DEVICE_LIB    = -L$(CUDAPATH)/lib64/ -lcudart -lcuda -ldl
+cuda: DEVICE_LIB    = -L$(CUDAPATH)/lib/ -lcudart -lcuda -ldl
 cuda: DEVICE_SFX    = cu
 # Call the next step of the build process
 cuda: build

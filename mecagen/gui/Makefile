@@ -47,7 +47,7 @@ CFLAGS += -I. -I$(INC) -I$(MODELPATH)/includes
 ## Use pipe instead of files, stack hardening.
 CFLAGS += -pipe -fstack-protector --param=ssp-buffer-size=4
 ## Qt definitions:
-CFLAGS += -D_REENTRANT -fPIE
+CFLAGS += -D_REENTRANT -fPIE -fPIC
 CFLAGS += -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB
 ## Qt includes:
 CFLAGS += -I$(QTINCLUDEPATH)/
