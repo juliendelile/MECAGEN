@@ -1,0 +1,68 @@
+
+# Additional requirement
+# install NVIDIA Container Toolkit (see nvidia doc)
+
+# Build image
+# docker build -f Dockerfile_cuda . -t mecagen_cuda
+
+# Run container
+# xhost +local:docker
+# docker run -it --gpus all --rm \
+# 	-e DISPLAY=${DISPLAY} \
+# 	--device /dev/dri/card0 \
+# 	-v /tmp/.X11-unix:/tmp/.X11-unix:rw \
+# 	mecagen_cuda
+
+FROM nvidia/cuda:11.4.0-devel-ubuntu20.04
+
+ARG DEBIAN_FRONTEND=noninteractive
+ENV TZ=Europe/London
+
+ENV NVIDIA_VISIBLE_DEVICES all
+ENV NVIDIA_DRIVER_CAPABILITIES graphics,utility,compute,display
+
+RUN apt update && apt install -y \
+	build-essential \
+	freeglut3-dev \
+	git \
+	libboost-random-dev \
+	libboost-serialization-dev \
+	libglew-dev \
+	libsdl2-dev \
+	qt5-default \
+	wget
+
+WORKDIR /home
+
+RUN git clone https://github.com/juliendelile/MECAGEN.git \
+	&& cd MECAGEN \
+	&& git reset --hard 76958a8
+
+# uncomment CUDAPATH to compile cuda version
+# and update path with image path
+RUN cd MECAGEN \
+	&& sed -i \
+	"s/# CUDAPATH.*/CUDAPATH=\/usr\/local\/cuda-11.4\/targets\/x86_64-linux/" \
+	user_paths_MUST_BE_EDITED_FIRST
+
+# We compile the default and the zebrafish version
+# in two separate folders
+RUN cp -r MECAGEN MECAGEN_zebra
+
+RUN cd MECAGEN \
+	&& make CUSTOM=default -j4 \
+	&& cd mecagen \
+	&& ./generate_input_files.sh default
+
+RUN cd MECAGEN_zebra \
+	&& make CUSTOM=zebrafish -j4 \
+	&& cd mecagen \
+	&& ./generate_input_files.sh zebrafish
+
+# Replace the path of zebrafish demo to run from the zebra folder
+RUN cd MECAGEN/mecagen \
+	&& sed -i \
+	"25s/.\/launchGUI.sh/cd ..\/..\/MECAGEN_zebra\/mecagen \&\& .\/launchGUI.sh/" \
+	run_examples.sh 
+
+CMD cd MECAGEN/mecagen && ./run_examples.sh
